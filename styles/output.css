@@ -74,6 +74,7 @@
     --color-cyan-600: #0891B2;
     --color-cyan-800: #155E75;
     --color-sky-100: oklch(95.1% 0.026 236.824);
+    --color-sky-200: oklch(90.1% 0.058 230.902);
     --color-sky-300: oklch(82.8% 0.111 230.318);
     --color-sky-400: oklch(74.6% 0.16 232.661);
     --color-sky-500: oklch(68.5% 0.169 237.323);
@@ -2098,6 +2099,9 @@
   .border-lime-300 {
     border-color: var(--color-lime-300);
   }
+  .border-sky-200 {
+    border-color: var(--color-sky-200);
+  }
   .border-sky-300 {
     border-color: var(--color-sky-300);
   }
@@ -2683,6 +2687,14 @@
       }
     }
   }
+  .hover\:border-3 {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 3px;
+      }
+    }
+  }
   .hover\:border-gray-300 {
     &:hover {
       @media (hover: hover) {
@@ -2722,6 +2734,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-lime-800);
+      }
+    }
+  }
+  .hover\:bg-sky-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-sky-100);
       }
     }
   }
@@ -3188,6 +3207,11 @@
       border-color: var(--color-gray-700);
     }
   }
+  .dark\:border-sky-700 {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--color-sky-700);
+    }
+  }
   .dark\:border-transparent {
     @media (prefers-color-scheme: dark) {
       border-color: transparent;
@@ -3311,6 +3335,15 @@
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-gray-800);
+        }
+      }
+    }
+  }
+  .dark\:hover\:bg-sky-700 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-sky-700);
         }
       }
     }
