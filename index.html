@@ -124,27 +124,26 @@
                         <img src="assets/images/after1.jpg" class="absolute inset-0 w-full h-full object-cover"
                             alt="After Image" />
 
+                        <!-- BEFORE overlay label -->
+                        <span
+                            class="absolute top-4 left-4 z-20 text-white font-bold text-sm uppercase bg-black/50 px-3 py-1 rounded">
+                            Before
+                        </span>
+
+                        <!-- AFTER overlay label -->
+                        <span
+                            class="absolute top-4 right-4 z-20 text-white font-bold text-sm uppercase bg-black/50 px-3 py-1 rounded">
+                            After
+                        </span>
+
                         <!-- Before Image -->
                         <div id="before-image" class="absolute inset-0 overflow-hidden" style="width: 0%;">
                             <img src="assets/images/before1.jpg" class="w-full h-full object-cover"
                                 alt="Before Image" />
-                            <!-- Floating Before Label -->
-                            <span id="before-label"
-                                class="absolute top-4 left-4 z-30 text-white font-bold text-sm uppercase bg-black/50 px-3 py-1 rounded pointer-events-none"
-                                style="transform: translateX(0); transition: transform 0.1s ease-in-out;">
-                                Before
-                            </span>
                         </div>
 
-                        <!-- Floating After Label -->
-                        <span id="after-label"
-                            class="absolute top-4 right-4 z-30 text-white font-bold text-sm uppercase bg-black/50 px-3 py-1 rounded pointer-events-none">
-                            After
-                        </span>
-
                         <!-- Slider Handle -->
-                        <div id="slider"
-                            class="absolute top-0 bottom-0 w-1 bg-lime-500 z-40 cursor-ew-resize transition-all duration-100"
+                        <div id="slider" class="absolute top-0 bottom-0 w-1 bg-lime-500 z-30 cursor-ew-resize "
                             style="left: 0%;">
                             <div
                                 class="absolute top-1/2 -translate-y-1/2 -left-2 bg-lime-500 rounded-full w-5 h-5 border-2 border-white">
@@ -152,6 +151,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
         </section>
     </main>
