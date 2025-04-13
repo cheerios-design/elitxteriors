@@ -1,25 +1,19 @@
-const slider = document.getElementById("slider");
+const container = document.getElementById("slider-container");
 const beforeImage = document.getElementById("before-image");
-const container = slider.parentElement;
+const slider = document.getElementById("slider");
 
-let isSliding = false;
-
-const updateSlider = (x) => {
+container.addEventListener("mousemove", (e) => {
   const rect = container.getBoundingClientRect();
-  let offsetX = x - rect.left;
-  offsetX = Math.max(0, Math.min(offsetX, rect.width));
+  const offsetX = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
   beforeImage.style.width = `${offsetX}px`;
   slider.style.left = `${offsetX}px`;
-};
-
-slider.addEventListener("mousedown", () => (isSliding = true));
-window.addEventListener("mouseup", () => (isSliding = false));
-window.addEventListener("mousemove", (e) => {
-  if (isSliding) updateSlider(e.clientX);
 });
 
-slider.addEventListener("touchstart", () => (isSliding = true));
-window.addEventListener("touchend", () => (isSliding = false));
-window.addEventListener("touchmove", (e) => {
-  if (isSliding) updateSlider(e.touches[0].clientX);
+// Optional: add touch support for mobile
+container.addEventListener("touchmove", (e) => {
+  const touch = e.touches[0];
+  const rect = container.getBoundingClientRect();
+  const offsetX = Math.max(0, Math.min(touch.clientX - rect.left, rect.width));
+  beforeImage.style.width = `${offsetX}px`;
+  slider.style.left = `${offsetX}px`;
 });
