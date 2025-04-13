@@ -1515,6 +1515,9 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
+  .h-\[50\] {
+    height: 50;
+  }
   .h-\[calc\(100\%-1rem\)\] {
     height: calc(100% - 1rem);
   }
@@ -1625,6 +1628,9 @@
   .w-2\/3 {
     width: calc(2/3 * 100%);
   }
+  .w-2xl {
+    width: var(--container-2xl);
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
@@ -1648,6 +1654,9 @@
   }
   .w-\[\%95\] {
     width: %95;
+  }
+  .w-\[50\] {
+    width: 50;
   }
   .w-\[300px\] {
     width: 300px;
@@ -2187,6 +2196,12 @@
   }
   .bg-sky-500 {
     background-color: var(--color-sky-500);
+  }
+  .bg-sky-800 {
+    background-color: var(--color-sky-800);
+  }
+  .bg-sky-900 {
+    background-color: var(--color-sky-900);
   }
   .bg-transparent {
     background-color: transparent;
