@@ -9,7 +9,7 @@ const updateSlider = (clientX) => {
   offsetX = Math.max(0, Math.min(offsetX, rect.width));
   beforeImage.style.width = `${offsetX}px`;
   slider.style.left = `${offsetX}px`;
-  beforeLabel.style.transform = `translateX(${offsetX - 60}px)`; // shift left to stay inside
+  //   beforeLabel.style.transform = `translateX(${offsetX - 60}px)`; // shift left to stay inside
 };
 
 // Cursor tracking
@@ -34,6 +34,6 @@ window.addEventListener("load", () => {
     const widthPx = (container.offsetWidth * progress) / 100;
     beforeImage.style.width = `${widthPx}px`;
     slider.style.left = `${widthPx}px`;
-    beforeLabel.style.transform = `translateX(${widthPx - 60}px)`;
-  }, 16);
+    // beforeLabel.style.transform = `translateX(${widthPx - 60}px)`;
+  });
 });
