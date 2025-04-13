@@ -24,7 +24,6 @@
     font-weight: 800;
 }
 
-a:hover svg {
-    color: #f3f3f3;
-    /* amber-400 */
+.twentytwenty-container img {
+    object-fit: cover;
 }
