@@ -73,8 +73,13 @@
     --color-cyan-500: #06B6D4;
     --color-cyan-600: #0891B2;
     --color-cyan-800: #155E75;
+    --color-sky-100: oklch(95.1% 0.026 236.824);
+    --color-sky-300: oklch(82.8% 0.111 230.318);
     --color-sky-400: oklch(74.6% 0.16 232.661);
     --color-sky-500: oklch(68.5% 0.169 237.323);
+    --color-sky-700: oklch(50% 0.134 242.749);
+    --color-sky-800: oklch(44.3% 0.11 240.79);
+    --color-sky-900: oklch(39.1% 0.09 240.876);
     --color-blue-50: #EFF6FF;
     --color-blue-100: #DBEAFE;
     --color-blue-200: #BFDBFE;
@@ -2084,6 +2089,9 @@
   .border-lime-300 {
     border-color: var(--color-lime-300);
   }
+  .border-sky-300 {
+    border-color: var(--color-sky-300);
+  }
   .border-white {
     border-color: var(--color-white);
   }
@@ -2161,6 +2169,24 @@
   }
   .bg-lime-500 {
     background-color: var(--color-lime-500);
+  }
+  .bg-sky-100 {
+    background-color: var(--color-sky-100);
+  }
+  .bg-sky-300 {
+    background-color: var(--color-sky-300);
+  }
+  .bg-sky-400 {
+    background-color: var(--color-sky-400);
+  }
+  .bg-sky-400\/50 {
+    background-color: color-mix(in srgb, oklch(74.6% 0.16 232.661) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-sky-400) 50%, transparent);
+    }
+  }
+  .bg-sky-500 {
+    background-color: var(--color-sky-500);
   }
   .bg-transparent {
     background-color: transparent;
@@ -2546,6 +2572,15 @@
   .text-lime-900 {
     color: var(--color-lime-900);
   }
+  .text-sky-500 {
+    color: var(--color-sky-500);
+  }
+  .text-sky-800 {
+    color: var(--color-sky-800);
+  }
+  .text-sky-900 {
+    color: var(--color-sky-900);
+  }
   .text-slate-400 {
     color: var(--color-slate-400);
   }
@@ -2592,6 +2627,9 @@
   }
   .ring-lime-400 {
     --tw-ring-color: var(--color-lime-400);
+  }
+  .ring-sky-400 {
+    --tw-ring-color: var(--color-sky-400);
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -2672,6 +2710,13 @@
       }
     }
   }
+  .hover\:bg-sky-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-sky-800);
+      }
+    }
+  }
   .hover\:bg-white {
     &:hover {
       @media (hover: hover) {
@@ -2707,6 +2752,13 @@
       }
     }
   }
+  .hover\:text-sky-700 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-sky-700);
+      }
+    }
+  }
   .hover\:text-white {
     &:hover {
       @media (hover: hover) {
@@ -2725,6 +2777,13 @@
     &:hover {
       @media (hover: hover) {
         --tw-ring-color: var(--color-lime-700);
+      }
+    }
+  }
+  .hover\:ring-sky-700 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-ring-color: var(--color-sky-700);
       }
     }
   }
@@ -2768,6 +2827,16 @@
   .focus\:ring-lime-300 {
     &:focus {
       --tw-ring-color: var(--color-lime-300);
+    }
+  }
+  .focus\:ring-sky-100 {
+    &:focus {
+      --tw-ring-color: var(--color-sky-100);
+    }
+  }
+  .focus\:ring-sky-300 {
+    &:focus {
+      --tw-ring-color: var(--color-sky-300);
     }
   }
   .focus\:outline-none {
@@ -3158,6 +3227,16 @@
   .dark\:bg-lime-900 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-lime-900);
+    }
+  }
+  .dark\:bg-sky-800 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-sky-800);
+    }
+  }
+  .dark\:bg-sky-900 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-sky-900);
     }
   }
   .dark\:text-blue-500 {
