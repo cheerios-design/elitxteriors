@@ -27,3 +27,16 @@
 .twentytwenty-container img {
     object-fit: cover;
 }
+
+@layer utilities {
+    .pre-slide-h2 {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .animate-slide-in-h2 {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition: all 0.7s ease-out;
+    }
+}
