@@ -30,7 +30,7 @@
         <nav class="bg-sky-500 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-sky-800 filter backdrop-blur-lg shadow-lg">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="index.html" class="flex items-center">
-                    <img src="assets/logos/mainlogo.webp" class="mr-3 scale-200 sm:h-8" alt="Elitexteriors Logo" />
+                    <img src="assets/logos/mainlogo.webp" class="mr-3 md:scale-200 sm:h-8" alt="Elitexteriors Logo" />
                     <span
                         class="self-center text-xl font-semibold font-heading whitespace-nowrap uppercase dark:text-white">Elite
                         <br>
@@ -88,23 +88,24 @@
         <section id="hero"
             class="bg-white dark:bg-sky-900 h-fit w-full py-10 antialiased flex items-center justify-center">
 
-            <div class="max-w-screen mx-0  flex flex-col lg:flex-row items-left text-left justify-between gap-12">
+            <div
+                class="max-w-screen mx-0  flex flex-col md:flex-row md:items-left md:text-left items-center text-center justify-between gap-12">
                 <!-- Text Content -->
-                <div class="max-w-xl text-left lg:text-left">
+                <div class="max-w-xl text-center lg:text-left">
                     <p
-                        class="font-paragraph text-sm mb-4 text-slate-800 ring-1 ring-sky-400 bg-sky-300 inline-block hover:ring-sky-700 w-[300px] p-0.5 font-thin">
+                        class="font-paragraph rounded-xl text-sm mb-4 text-slate-800 ring-1 ring-sky-400 bg-sky-300 inline-block hover:ring-sky-700 w-[300px] p-0.5 font-thin">
                         Check out our
                         <span class="font-semibold">
                             <a class="hover:text-white hover:cursor-pointer"
                                 href="https://www.elitxteriors.com/spring-cleaning-campaign" target="_blank"
                                 rel="noopener noreferrer">
-                                Spring Cleaning Campaign
+                                Spring Cleaning Campaign >
                             </a>
                         </span>
                     </p>
 
                     <h1
-                        class="text-sky-900 mb-4 text-4xl font-accent font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+                        class="text-sky-900 mb-4 text-7xl font-accent font-extrabold tracking-tight leading-none md:text-6xl dark:text-white">
                         EXCELLENCE
                         <br>IN EVERY DETAIL
                     </h1>
@@ -173,7 +174,7 @@
         </section>
         <section id="about" class="bg-sky-100 pt-4 antialiased w-full block dark:bg-sky-900 md:pt-8">
             <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                <div class="font-light text-gray-500 text-center md:text-left sm:text-lg dark:text-gray-400">
                     <h2
                         class="mb-4 text-6xl font-accent uppercase  tracking-tight font-extrabold text-blue-950 dark:text-white">
                         Who are we?
@@ -193,8 +194,9 @@
                         </svg>
                     </a>
                 </div>
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg" src="assets/images/gallery1(2).JPG" alt="us at work">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                    <img class="mt-4 w-full hidden md:inline-flex md:mt-10 rounded-lg"
+                        src="assets/images/gallery1(2).JPG" alt="us at work">
                     <img class="mt-8 w-full lg:mt-14 rounded-lg" src="assets/images/about-us.jpg" alt="us">
                 </div>
             </div>
@@ -202,11 +204,10 @@
         <section id="services" class="bg-sky-100 pb-4 antialiased w-full h-fit block dark:bg-sky-900 md:pb-8">
             <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <!-- <img class="w-full rounded-lg" src="assets/images/gallery1(1).JPG" alt="commercial services"> -->
                     <video class="mt-4 w-full lg:mt-10 rounded-lg filter shadow-lg" src="assets/videos/overview.mov"
                         autoplay loop muted alt="office content 2"></video>
                 </div>
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                <div class="font-light text-center md:text-left mt-5 text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2
                         class="mb-4 text-6xl tracking-tight font-accent uppercase font-extrabold text-blue-950 dark:text-white">
                         Our Services
@@ -230,21 +231,19 @@
                 </div>
             </div>
         </section>
-        <section id="gallery" class="bg-white dark:bg-sky-900 py-8 antialiased w-1/2 min-h-screen block md:py-16">
-            <div id="gallery-content"
-                class="mx-auto max-w-screen-xl text-center justify-center items-center flex flex-col px-4 2xl:px-0">
+        <section id="gallery" class="bg-white dark:bg-sky-900 py-8 antialiased w-full h-fit block md:py-16">
+            <div id="gallery-content" class="mx-auto w-full md:text-left text-center flex flex-col px-4 2xl:px-0">
                 <h2
-                    class="text-sky-900 mb-4 uppercase text-center text-4xl font-accent font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+                    class="text-sky-900 mb-4 uppercase font-accent font-extrabold tracking-tight leading-none md:text-5xl text-6xl dark:text-white">
                     Gallery</h2>
-                <p
-                    class="mb-6 font-paragraph text-center font-light w-full text-slate-400 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400m">
+                <p class="mb-6 font-paragraph font-light text-slate-400 lg:mb-8 md:text-lg dark:text-gray-400m">
                     Explore our gallery to see the stunning transformations we've achieved for our clients. Our
                     commitment to quality and attention to detail is evident in every project we undertake. Browse
                     through our collection of before-and-after images to witness the power of our services.
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 items-center w-full md:grid-cols-3 gap-2">
+            <div class="grid grid-cols-3 items-center w-full md:grid-cols-3 gap-2">
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto saturate-45 hover:saturate-100 max-w-full rounded-lg"
@@ -395,12 +394,12 @@
         </section>
         <section id="get-quote" class=" py-8 antialiased w-full min-h-screen block dark:bg-sky-900 md:py-16">
             <div id="quote-content"
-                class="mx-auto max-w-screen-xl text-center justify-center items-center flex flex-col px-4 2xl:px-0">
+                class="mx-auto w-full text-center justify-center items-center flex flex-col px-4 2xl:px-0">
                 <h2
                     class="text-sky-900 mb-4 text-4xl font-accent font-extrabold tracking-tight leading-none md:text-5xl uppercase xl:text-6xl dark:text-white">
                     Get a Quote</h2>
                 <p
-                    class="mb-6 font-paragraph font-light w-2xl text-slate-400 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400m">
+                    class="mb-6 font-paragraph font-light w-fit text-slate-400 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400m">
                     Fill out the form below to receive a personalized quote for our services. Our team will get back to
                     you as soon as possible with the information you need.
                 </p>
@@ -422,25 +421,27 @@
 
 
     <footer class="bg-sky-500 dark:bg-sky-900 bottom-0 ">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:mx-auto w-fit mx-5 py-12 md:py-8">
             <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
+                <div class="items-center grid grid-cols-2 md:flex-row  justify-center mb-6 md:mb-0">
                     <a href="index.html" class="flex items-center">
-                        <img src="assets/logos/mainlogo.webp" width="100" class=" me-3" alt="Elitexteriors Logo" />
+                        <img src="assets/logos/mainlogo.webp" width="100" class="" alt="Elitexteriors Logo" />
                         <span
-                            class="self-center text-2xl font-semibold font-heading uppercase whitespace-nowrap dark:text-white">Elite
+                            class="text-2xl font-semibold font-heading uppercase whitespace-nowrap dark:text-white">Elite
                             <br> Exteriors</span>
                     </a>
-                    <iframe class="my-10" border="0" marginheight="1" marginwidth="1" frameborder="0" scrolling="no"
-                        seamless="seamless" style=" overflow:scroll; border: 0; height:100%; width:100%; scale:1 "
+                    <iframe class="my-10 md:ml-5" border="0" marginheight="1" marginwidth="1" frameborder="0"
+                        scrolling="no" seamless="seamless"
+                        style=" overflow:scroll; border: 0; height:50px; width:300px; scale:1 "
                         src="https://seal-norfolk.bbb.org/frame/blue-seal-120-61-bbb-90553538.png?chk=3213FA74AA"></iframe>
                 </div>
-                <div class="grid grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-4">
+                <div class="grid grid-cols-4 gap-6  md:gap-8 ">
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-200 font-accent uppercase dark:text-white">
                             Service Locations
                         </h2>
-                        <ul class="text-blue-950 text-start ml-2 font-paragraph dark:text-gray-400 font-medium">
+                        <ul
+                            class="text-blue-950 text-sm md:text-base text-start ml-2 font-paragraph dark:text-gray-400 font-medium">
                             <li class="mb-4">> Chesapeake</li>
                             <li class="mb-4">> Virginia Beach</li>
                             <li class="mb-4">> Hampton</li>
@@ -453,7 +454,8 @@
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-200 font-accent uppercase dark:text-white">
                             Services</h2>
-                        <ul class="text-blue-950 text-start ml-2 font-paragraph dark:text-gray-400 font-medium">
+                        <ul
+                            class="text-blue-950 text-sm md:text-base text-start ml-2 font-paragraph dark:text-gray-400 font-medium">
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Pressure Washing</a>
                             </li>
@@ -472,7 +474,8 @@
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-200 font-accent uppercase dark:text-white">Legal
                         </h2>
-                        <ul class="text-blue-950 text-start ml-2 font-paragraph dark:text-gray-400 font-medium">
+                        <ul
+                            class="text-blue-950 text-start text-sm md:text-base ml-2 font-paragraph dark:text-gray-400 font-medium">
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Privacy Policy</a>
                             </li>
@@ -485,14 +488,21 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-200 font-accent uppercase dark:text-white">
                             Contact
                             us</h2>
-                        <ul class="text-blue-950 font-paragraph text-start ml-2 dark:text-gray-400 font-medium">
+                        <ul
+                            class="text-blue-950 font-paragraph text-start ml-2 dark:text-gray-400 font-medium text-sm md:text-base">
                             <li class="mb-4">
                                 <a href="tel:+1757-796-7240" class="hover:underline">+1 (757)-796-7240</a>
                             </li>
                             <li class="mb-4">
                                 <a href="mailto:info@elitxteriors.com" class="hover:underline">info@elitxteriors.com</a>
                             </li>
-                            <li class="mb-4">
+                            <li class="mb-4 lg:hidden ">
+                                <a href="https://maps.app.goo.gl/vMpAaLWDQ5U6sxaZ7" class="hover:underline"> 109G
+                                    Gainsborough Square #711
+
+                                    Chesapeake, VA 23320</a>
+                            </li>
+                            <li class="mb-4 hidden lg:inline-flex">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.265121292952!2d-76.24579072429445!3d36.74020687226422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89babb661e00d56b%3A0x2bb614b028c312f9!2s109%20G%20Gainsborough%20Square%20%23711%2C%20Chesapeake%2C%20VA%2023320%2C%20USA!5e0!3m2!1sen!2str!4v1745269875950!5m2!1sen!2str"
                                     width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy"
