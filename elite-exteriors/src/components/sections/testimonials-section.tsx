@@ -73,14 +73,14 @@ export function TestimonialsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 lg:py-32 bg-gradient-to-br from-white to-primary-50/20 relative overflow-hidden"
+      className="py-20 lg:py-32 bg-gradient-to-br from-white to-sky-500/30 relative overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
             What Our
-            <span className="text-gradient bg-gradient-to-r from-primary-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
               {" "}
               Customers Say
             </span>
@@ -152,7 +152,7 @@ export function TestimonialsSection() {
                 Get Free Estimate
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Call (555) 123-4567
+                Call (757) 769-7240
               </button>
             </div>
           </div>

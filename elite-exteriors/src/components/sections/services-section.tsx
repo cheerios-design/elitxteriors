@@ -106,7 +106,7 @@ export function ServicesSection() {
         <div ref={headerRef} className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
             Our
-            <span className="text-gradient bg-gradient-to-r from-primary-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
               {" "}
               Professional Services
             </span>
@@ -175,7 +175,7 @@ export function ServicesSection() {
                 <Link href={service.href}>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600 transition-all"
+                    className="w-full hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all"
                   >
                     Learn More
                   </Button>

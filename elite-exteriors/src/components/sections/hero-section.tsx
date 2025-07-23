@@ -69,19 +69,19 @@ export function HeroSection() {
           className="w-full h-full object-cover"
           poster="/assets/images/hero-poster.jpg"
         >
-          <source src="/assets/videos/overview.mov" type="video/mp4" />
+          <source src="/assets/videos/overview.mp4" type="video/mp4" />
         </video>
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative top-45 w-fit z-20 container rounded-2xl bg-sky-100/10 backdrop-blur-sm mx-auto py-2 px-2 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1
             ref={titleRef}
             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight"
           >
             Transform Your
-            <span className="block text-gradient bg-gradient-to-r from-primary-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="block text-gradient bg-gradient-to-r from-primary-400 to-sky-400 bg-clip-text text-transparent">
               Exterior Spaces
             </span>
           </h1>
@@ -136,7 +136,7 @@ export function HeroSection() {
       {/* Floating Elements */}
       <div className="absolute top-20 right-10 w-20 h-20 bg-primary-500/20 rounded-full blur-xl animate-pulse-slow" />
       <div
-        className="absolute bottom-20 left-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl animate-pulse-slow"
+        className="absolute bottom-20 left-10 w-32 h-32 bg-sky-500/20 rounded-full blur-xl animate-pulse-slow"
         style={{ animationDelay: "1s" }}
       />
       <div

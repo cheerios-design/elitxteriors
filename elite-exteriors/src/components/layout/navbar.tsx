@@ -52,8 +52,8 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-neutral-200"
-          : "bg-transparent"
+          ? "bg-white/70 backdrop-blur-md shadow-lg border-b border-neutral-200"
+          : "bg-sky-800/50 backdrop-blur-md "
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,9 +61,9 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="relative w-10 h-10 lg:w-12 lg:h-12">
+              <div className="relative w-15 h-15 lg:w-12 lg:h-12">
                 <Image
-                  src="/assets/logos/mainlogo.webp"
+                  src="/assets/logos/main-logo.png"
                   alt="Elite Exteriors Logo"
                   fill
                   className="object-contain"
@@ -71,11 +71,8 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg lg:text-xl font-bold text-neutral-900">
+                <span className="text-lg uppercase lg:text-xl font-heading text-sky-800 font-bold text-neutral-900">
                   Elite Exteriors
-                </span>
-                <span className="text-xs text-neutral-600 hidden sm:block">
-                  Premium Exterior Services
                 </span>
               </div>
             </Link>

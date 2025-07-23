@@ -6,16 +6,19 @@ const footerLinks = {
   services: [
     { label: "Pressure Washing", href: "/services#pressure-washing" },
     { label: "Gutter Cleaning", href: "/services#gutter-cleaning" },
+    {
+      label: "Christmas Light Installation",
+      href: "/services#christmas-lights",
+    },
+    { label: "Lawn Care", href: "/services#lawn-care" },
     { label: "Deck & Patio Cleaning", href: "/services#deck-patio" },
     { label: "Driveway Cleaning", href: "/services#driveway-cleaning" },
-    { label: "Commercial Services", href: "/services#commercial" },
-    { label: "Lawn Care", href: "/services#lawn-care" },
   ],
   company: [
     { label: "About Us", href: "/about" },
-    { label: "Our Process", href: "/about#process" },
-    { label: "Why Choose Us", href: "/about#why-choose-us" },
+    { label: "Our Founders", href: "/about#founders" },
     { label: "Service Areas", href: "/about#service-areas" },
+    { label: "Why Choose Us", href: "/about#why-choose-us" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
@@ -30,7 +33,7 @@ const footerLinks = {
 const socialLinks = [
   {
     name: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/people/Elite-Exteriors-Pressure-Washing-Services/61571075571156/",
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -39,7 +42,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/elit_xteriors/",
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297L3.323 17.49c.875.807 2.026 1.297 3.323 1.297 1.297 0 2.448-.49 3.323-1.297l-1.803-1.799c-.875.807-2.026 1.297-3.323 1.297zm7.119 0c-1.297 0-2.448-.49-3.323-1.297l-1.803 1.799c.875.807 2.026 1.297 3.323 1.297 1.297 0 2.448-.49 3.323-1.297l-1.803-1.799c-.875.807-2.026 1.297-3.323 1.297z" />
@@ -47,14 +50,11 @@ const socialLinks = [
     ),
   },
   {
-    name: "Google Reviews",
-    href: "https://google.com/reviews",
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/elite-exteriors-pressure-washing-services",
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
       </svg>
     ),
   },
@@ -67,13 +67,13 @@ export function Footer() {
     <footer className="bg-neutral-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative w-10 h-10">
                 <Image
-                  src="/assets/logos/mainlogo.webp"
+                  src="/assets/logos/main-logo.png"
                   alt="Elite Exteriors Logo"
                   fill
                   className="object-contain"
@@ -82,15 +82,26 @@ export function Footer() {
               <div>
                 <h3 className="text-xl font-bold">Elite Exteriors</h3>
                 <p className="text-sm text-neutral-400">
-                  Premium Exterior Services
+                  Family-Run Business in Hampton Roads
                 </p>
               </div>
             </div>
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              Professional exterior cleaning and maintenance services. We bring
-              new life to your property with expert pressure washing, gutter
-              cleaning, and comprehensive exterior care.
+              Family-run business founded by Ahmet & Gaby, providing
+              professional pressure washing, gutter cleaning, Christmas light
+              installation, and lawn care services throughout Hampton Roads,
+              Virginia.
             </p>
+
+            {/* BBB Seal */}
+            <div className="flex justify-center mb-6">
+              <iframe
+                className="h-[100px] w-[138px] lg:w-[138px] lg:h-[80px]"
+                title="BBB Seal"
+                src="https://seal-norfolk.bbb.org/frame/blue-seal-120-61-bbb-90553538.png?chk=3213FA74AA"
+                style={{ border: 0 }}
+              />
+            </div>
 
             {/* Contact Info */}
             <div className="space-y-3 text-sm">
@@ -108,7 +119,7 @@ export function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-neutral-300">(555) 123-4567</span>
+                <span className="text-neutral-300">(757) 796-7240</span>
               </div>
               <div className="flex items-center space-x-3">
                 <svg
@@ -124,9 +135,7 @@ export function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="text-neutral-300">
-                  info@eliteexteriors.com
-                </span>
+                <span className="text-neutral-300">info@elitxteriors.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <svg
@@ -149,9 +158,27 @@ export function Footer() {
                   />
                 </svg>
                 <span className="text-neutral-300">
-                  123 Business Ave
+                  109G Gainsborough Square #711
                   <br />
-                  Your City, ST 12345
+                  Chesapeake, VA 23320
+                </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <svg
+                  className="w-4 h-4 text-primary-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span className="text-neutral-300">
+                  Mon-Sat: 8:00 AM - 6:00 PM
                 </span>
               </div>
             </div>
@@ -169,6 +196,26 @@ export function Footer() {
                   >
                     {link.label}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service Locations */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Service Locations</h4>
+            <ul className="space-y-3">
+              {[
+                "Virginia Beach",
+                "Chesapeake",
+                "Norfolk",
+                "Suffolk",
+                "Newport News",
+                "Hampton",
+                "Williamsburg",
+              ].map((location) => (
+                <li key={location} className="text-neutral-300 text-sm">
+                  {location}
                 </li>
               ))}
             </ul>
@@ -193,21 +240,39 @@ export function Footer() {
 
           {/* Newsletter & Legal */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Stay Updated</h4>
+            <h4 className="text-lg font-semibold mb-6">Get In Touch</h4>
             <p className="text-neutral-300 text-sm mb-4">
-              Get the latest tips and updates on exterior maintenance.
+              Serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport
+              News, Hampton, and Williamsburg.
             </p>
 
-            {/* Newsletter Signup */}
-            <div className="space-y-3 mb-8">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+            {/* Google Maps */}
+            <div className="mb-6">
+              <iframe
+                title="Google Maps Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.265121292952!2d-76.24579072429445!3d36.74020687226422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89babb661e00d56b%3A0x2bb614b028c312f9!2s109%20G%20Gainsborough%20Square%20%23711%2C%20Chesapeake%2C%20VA%2023320%2C%20USA!5e0!3m2!1sen!2str!4v1745269875950!5m2!1sen!2str"
+                className="w-full h-[150px] rounded-lg"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
-              <Button variant="primary" size="sm" className="w-full">
-                Subscribe
-              </Button>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="space-y-3 mb-8">
+              <Link href="/contact">
+                <Button variant="primary" size="sm" className="w-full">
+                  Get Free Quote
+                </Button>
+              </Link>
+              <Link href="tel:+17577967240">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-neutral-600 text-neutral-300 hover:bg-neutral-800"
+                >
+                  Call (757) 796-7240
+                </Button>
+              </Link>
             </div>
 
             {/* Legal Links */}

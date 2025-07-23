@@ -4,50 +4,93 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About Us - Elite Exteriors",
+  title:
+    "About Us - Elite Exteriors - Professional Pressure Washing & Exterior Services in Hampton Roads, VA",
   description:
-    "Learn about Elite Exteriors - your trusted partner for professional exterior cleaning and maintenance services. Family-owned business with years of experience.",
+    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Ahmet & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
 };
 
 const teamMembers = [
   {
-    name: "John Smith",
-    role: "Founder & Owner",
-    image: "/assets/images/team/john.jpg", // Placeholder
-    bio: "With over 10 years of experience in exterior cleaning, John founded Elite Exteriors to provide top-quality services to homeowners and businesses.",
+    name: "Ahmet",
+    role: "Co-Founder & Owner",
+    image: "/assets/images/team/ahmet.jpg", // Placeholder
+    bio: "Co-founder of Elite Exteriors, Ahmet brings international perspective and dedication to quality service. Originally from Turkey, he's committed to building a trusted family business in Hampton Roads.",
   },
   {
-    name: "Sarah Johnson",
-    role: "Operations Manager",
-    image: "/assets/images/team/sarah.jpg", // Placeholder
-    bio: "Sarah ensures every project runs smoothly and customers receive exceptional service from start to finish.",
+    name: "Gaby",
+    role: "Co-Founder & Owner",
+    image: "/assets/images/team/gaby.jpg", // Placeholder
+    bio: "Co-founder of Elite Exteriors, Gaby brings diverse experience and customer-focused approach to the business. Originally from Zimbabwe, she ensures every customer receives exceptional service.",
   },
 ];
 
 const values = [
   {
-    title: "Quality First",
+    title: "Family Values",
     description:
-      "We use professional-grade equipment and proven techniques to deliver exceptional results every time.",
-    icon: "⭐",
+      "As a family-run business, we treat every customer and their property with the care and respect we'd give our own family.",
+    icon: (
+      <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
+        <svg
+          className="w-8 h-8 text-sky-700"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+        </svg>
+      </div>
+    ),
   },
   {
-    title: "Integrity",
+    title: "Local Expertise",
     description:
-      "Honest pricing, transparent communication, and reliable service you can count on.",
-    icon: "🤝",
+      "Deep knowledge of Virginia and Hampton Roads area properties, weather conditions, and specific cleaning needs.",
+    icon: (
+      <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
+        <svg
+          className="w-8 h-8 text-sky-700"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+        </svg>
+      </div>
+    ),
   },
   {
-    title: "Customer Focus",
+    title: "Quality Service",
     description:
-      "Your satisfaction is our priority. We go above and beyond to exceed expectations.",
-    icon: "❤️",
+      "Professional pressure washing, gutter cleaning, Christmas light installation, and lawn care services using proven techniques and equipment.",
+    icon: (
+      <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
+        <svg
+          className="w-8 h-8 text-sky-700"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z" />
+        </svg>
+      </div>
+    ),
   },
   {
-    title: "Environmental Care",
+    title: "Trusted Partner",
     description:
-      "Eco-friendly cleaning solutions that protect your property and the environment.",
-    icon: "🌱",
+      "Building lasting relationships with our customers through reliable service, honest communication, and fair pricing.",
+    icon: (
+      <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
+        <svg
+          className="w-8 h-8 text-sky-700"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M2.284 22.158c.001.95.679 1.752 1.62 1.792 1.31.055 2.623.022 3.935.022.954 0 1.786-.865 1.76-1.954-.029-1.221.018-2.445.029-3.667l.045-4.988c.003-.305.046-.362.335-.44a4.242 4.242 0 0 1 2.013-.067c1.23.262 2.129 1.21 2.261 2.46.066.62.07 1.249.078 1.874.025 1.64.038 3.28.054 4.921.01 1.087.796 1.877 1.883 1.882 1.171.006 2.342.008 3.513.007 1.106-.002 1.895-.778 1.898-1.883.007-3.371.007-6.742.01-10.113 0-.052 0-.105-.005-.156-.03-.355-.169-.658-.483-.838a2.638 2.638 0 0 0-.695-.291 7.484 7.484 0 0 0-2.887-.123c-.743.113-1.476.293-2.213.442-.97.196-1.946.28-2.934.178-1.268-.129-2.37-.666-3.402-1.38a32.36 32.36 0 0 0-1.494-.984c-.62-.38-1.314-.505-2.03-.544-.77-.043-1.536-.063-2.293.111-.59.136-.899.479-.966 1.077a3.438 3.438 0 0 0-.021.379m7.337-6.184a3.675 3.675 0 1 0-7.35-.031 3.675 3.675 0 0 0 7.35.03zm8.335-1.81a3.673 3.673 0 0 0-3.69 3.652 3.672 3.672 0 0 0 3.67 3.697 3.678 3.678 0 0 0 3.68-3.665 3.677 3.677 0 0 0-3.66-3.685z" />
+        </svg>
+      </div>
+    ),
   },
 ];
 
@@ -67,9 +110,12 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-                We&apos;re a family-owned business dedicated to transforming
-                properties through professional exterior cleaning and
-                maintenance services.
+                Elite Exteriors is a trusted family-run business founded by
+                Ahmet & Gaby, dedicated to providing top-notch pressure washing,
+                gutter cleaning, Christmas light installation, and lawn care
+                services in Hampton Roads, Virginia. We proudly serve Virginia
+                Beach, Chesapeake, Norfolk, Suffolk, Newport News, Hampton, and
+                Williamsburg.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
@@ -103,24 +149,35 @@ export default function AboutPage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
               Our Story
             </h2>
-            <div className="prose prose-lg max-w-none text-neutral-600">
+            <div className="text-xl text-neutral-600 mb-8 leading-relaxed">
               <p className="mb-6">
-                Elite Exteriors was founded with a simple mission: to provide
-                exceptional exterior cleaning services that transform and
-                protect properties while delivering outstanding customer
-                service.
+                Elite Exteriors is a trusted family-run business founded by
+                Ahmet and Gaby, proudly serving Virginia and the Hampton Roads
+                area. Founded by a diverse international couple - Ahmet from
+                Turkey and Gaby from Zimbabwe - we bring a unique perspective
+                and unwavering commitment to excellence in every service we
+                provide.
               </p>
               <p className="mb-6">
-                What started as a small local business has grown into a trusted
-                name in exterior maintenance, serving hundreds of satisfied
-                customers across the region. Our commitment to quality,
-                reliability, and customer satisfaction has been the foundation
-                of our success.
+                We specialize in providing top-notch pressure washing, gutter
+                cleaning, Christmas light installation, and lawn care services
+                with a personal touch that only a family business can provide.
+                Our service area includes Virginia Beach, Chesapeake, Norfolk,
+                Suffolk, Newport News, Hampton, and Williamsburg.
+              </p>
+              <p className="mb-6">
+                What started as a small local family business has grown into a
+                trusted name in exterior maintenance throughout the Hampton
+                Roads region. Our commitment to quality workmanship, honest
+                pricing, and treating every customer like family has been the
+                foundation of our success in the Virginia community.
               </p>
               <p>
-                Today, we continue to uphold these values while expanding our
-                services and investing in the latest equipment and training to
-                ensure we deliver the best possible results for every project.
+                As a family-run operation with international roots, we
+                understand the importance of taking care of your property as if
+                it were our own. We take pride in building lasting relationships
+                with our customers and contributing to the beauty and value of
+                properties throughout Hampton Roads, Virginia.
               </p>
             </div>
           </div>
@@ -128,13 +185,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 lg:py-32 bg-neutral-50">
+      <section className="py-20 lg:py-32 bg-sky-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Our Core Values
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+            <p className="text-lg text-sky-100 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -143,13 +200,13 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-white rounded-2xl shadow-lg"
+                className="text-center p-6 bg-sky-700 rounded-2xl shadow-lg hover:bg-sky-800 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3">
+                <div className="mb-4 flex justify-center">{value.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-neutral-600">{value.description}</p>
+                <p className="text-sky-100">{value.description}</p>
               </div>
             ))}
           </div>
@@ -161,10 +218,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
-              Meet Our Team
+              Meet Our Founders
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              The dedicated professionals behind Elite Exteriors
+              The international family team behind Elite Exteriors in Hampton
+              Roads, Virginia
             </p>
           </div>
 
@@ -194,11 +252,13 @@ export default function AboutPage() {
       <section className="py-20 lg:py-32 bg-primary-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Ready to Transform Your Property?
+            Ready to Transform Your Hampton Roads Property?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied customers who trust Elite Exteriors for
-            their exterior cleaning needs.
+            Join families throughout Virginia Beach, Chesapeake, Norfolk,
+            Suffolk, Newport News, Hampton, and Williamsburg who trust Elite
+            Exteriors for their pressure washing, gutter cleaning, Christmas
+            light installation, and lawn care needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -210,13 +270,13 @@ export default function AboutPage() {
                 Get Free Estimate
               </Button>
             </Link>
-            <Link href="tel:+15551234567">
+            <Link href="tel:+17577967240">
               <Button
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-primary-600"
               >
-                Call (555) 123-4567
+                Call (757) 796-7240
               </Button>
             </Link>
           </div>
