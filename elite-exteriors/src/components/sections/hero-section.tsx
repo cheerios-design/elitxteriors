@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ParticlesBackground } from "@/components/ui/particles-background";
 import { gsap } from "gsap";
 
 export function HeroSection() {
@@ -10,6 +11,18 @@ export function HeroSection() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -61,16 +74,22 @@ export function HeroSection() {
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/80 via-neutral-900/60 to-primary-900/40 z-10" />
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          poster="/assets/images/hero-poster.jpg"
-        >
-          <source src="/assets/videos/overview.mp4" type="video/mp4" />
-        </video>
+
+        {/* Show particles on mobile, video on desktop */}
+        {isMobile ? (
+          <ParticlesBackground />
+        ) : (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster="/assets/images/hero-poster.jpg"
+          >
+            <source src="/assets/videos/overview.mp4" type="video/mp4" />
+          </video>
+        )}
       </div>
 
       {/* Content */}

@@ -97,7 +97,7 @@ export default function ContactPage() {
       <AnimatedSection animation="fadeUp">
         <section className="py-20 lg:py-32 bg-gradient-to-br from-primary-50 to-sky-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <AnimatedSection animation="fadeUp" delay={0.2}>
+            <AnimatedSection animation="fadeUp" delay={0.1}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
                 Contact
                 <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </span>
               </h1>
             </AnimatedSection>
-            <AnimatedSection animation="fadeUp" delay={0.4}>
+            <AnimatedSection animation="fadeUp" delay={0.2}>
               <p className="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Ready to transform your property? Contact Ahmet & Gaby&apos;s
                 family-run business for a free estimate and experience the Elite
@@ -125,18 +125,55 @@ export default function ContactPage() {
               <AnimatedSection
                 key={index}
                 animation="scale"
-                delay={index * 0.2}
+                delay={index * 0.1}
               >
-                <Card className="p-6 text-center bg-gradient-to-br from-neutral-50 to-primary-50/20 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl mb-4">{info.icon}</div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+                <div className="text-center p-6 bg-sky-600 rounded-2xl shadow-lg hover:bg-sky-800 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                    {info.title === "Phone" && (
+                      <svg
+                        className="w-8 h-8 text-sky-700"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                      </svg>
+                    )}
+                    {info.title === "Email" && (
+                      <svg
+                        className="w-8 h-8 text-sky-700"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                      </svg>
+                    )}
+                    {info.title === "Service Area" && (
+                      <svg
+                        className="w-8 h-8 text-sky-700"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                      </svg>
+                    )}
+                    {info.title === "Business Hours" && (
+                      <svg
+                        className="w-8 h-8 text-sky-700"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z" />
+                      </svg>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
                     {info.title}
                   </h3>
-                  <p className="text-lg font-medium text-primary-600 mb-2">
+                  <p className="text-lg font-medium text-sky-200 mb-2">
                     {info.details}
                   </p>
-                  <p className="text-sm text-neutral-600">{info.description}</p>
-                </Card>
+                  <p className="text-sm text-sky-100">{info.description}</p>
+                </div>
               </AnimatedSection>
             ))}
           </div>
@@ -148,7 +185,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Form */}
-            <AnimatedSection animation="slideRight" delay={0.2}>
+            <AnimatedSection animation="slideRight" delay={0.1}>
               <Card className="p-8 bg-white shadow-xl">
                 <h2 className="text-3xl font-bold text-neutral-900 mb-6">
                   Get Your Free Estimate
@@ -163,7 +200,10 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6 text-sky-600"
+                >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
@@ -272,7 +312,7 @@ export default function ContactPage() {
             </AnimatedSection>
 
             {/* Additional Info */}
-            <AnimatedSection animation="slideLeft" delay={0.4}>
+            <AnimatedSection animation="slideLeft" delay={0.2}>
               <div className="space-y-8">
                 <Card className="p-8 bg-primary-600 text-white">
                   <h3 className="text-2xl font-bold mb-4">

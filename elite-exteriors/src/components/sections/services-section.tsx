@@ -18,7 +18,7 @@ const services = [
     description:
       "Professional pressure washing for driveways, sidewalks, decks, and exterior surfaces.",
     image: "/assets/images/services/driveway-cleaning.jpg",
-    href: "/services/pressure-washing",
+    href: "/services",
     features: ["Driveway Cleaning", "Deck & Patio", "Sidewalk Cleaning"],
   },
   {
@@ -26,7 +26,7 @@ const services = [
     description:
       "Complete gutter cleaning and maintenance to protect your home's foundation.",
     image: "/assets/images/services/gutter-cleaning.jpg",
-    href: "/services/gutter-cleaning",
+    href: "/services",
     features: ["Gutter Cleaning", "Downspout Service", "Gutter Guards"],
   },
   {
@@ -34,7 +34,7 @@ const services = [
     description:
       "Professional exterior cleaning services for commercial properties and businesses.",
     image: "/assets/images/services/commercial-pressure-washing.webp",
-    href: "/services/commercial",
+    href: "/services",
     features: ["Building Washing", "Parking Lots", "Storefront Cleaning"],
   },
   {
@@ -42,7 +42,7 @@ const services = [
     description:
       "Complete lawn care and landscaping services to keep your property beautiful.",
     image: "/assets/images/services/lawncare.jpg",
-    href: "/services/lawn-care",
+    href: "/services",
     features: ["Mowing", "Landscaping", "Seasonal Cleanup"],
   },
 ];

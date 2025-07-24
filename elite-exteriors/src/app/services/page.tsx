@@ -148,7 +148,7 @@ export default function ServicesPage() {
       <AnimatedSection animation="fadeUp">
         <section className="py-20 lg:py-32 bg-gradient-to-br from-primary-50 to-sky-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <AnimatedSection animation="fadeUp" delay={0.2}>
+            <AnimatedSection animation="fadeUp" delay={0.1}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
                 Our
                 <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
@@ -157,13 +157,13 @@ export default function ServicesPage() {
                 </span>
               </h1>
             </AnimatedSection>
-            <AnimatedSection animation="fadeUp" delay={0.4}>
+            <AnimatedSection animation="fadeUp" delay={0.2}>
               <p className="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Comprehensive exterior cleaning and maintenance services
                 designed to transform and protect your property investment.
               </p>
             </AnimatedSection>
-            <AnimatedSection animation="scale" delay={0.6}>
+            <AnimatedSection animation="scale" delay={0.3}>
               <Link href="/contact">
                 <Button
                   variant="primary"
@@ -186,7 +186,7 @@ export default function ServicesPage() {
               <AnimatedSection
                 key={index}
                 animation={index % 2 === 0 ? "slideRight" : "slideLeft"}
-                delay={0.2}
+                delay={0.1}
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
@@ -195,19 +195,19 @@ export default function ServicesPage() {
                 >
                   {/* Content */}
                   <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                    <AnimatedSection animation="fadeUp" delay={0.3}>
+                    <AnimatedSection animation="fadeUp" delay={0.15}>
                       <h2 className="text-3xl lg:text-4xl font-bold text-sky-600 mb-6">
                         {service.title}
                       </h2>
                     </AnimatedSection>
-                    <AnimatedSection animation="fadeUp" delay={0.4}>
+                    <AnimatedSection animation="fadeUp" delay={0.2}>
                       <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
                         {service.description}
                       </p>
                     </AnimatedSection>
 
                     {/* Features */}
-                    <AnimatedSection animation="fadeUp" delay={0.5}>
+                    <AnimatedSection animation="fadeUp" delay={0.25}>
                       <div className="mb-8">
                         <h3 className="text-xl font-semibold text-neutral-900 mb-4">
                           What&apos;s Included:
@@ -242,7 +242,7 @@ export default function ServicesPage() {
                     </AnimatedSection>
 
                     {/* Benefits */}
-                    <AnimatedSection animation="fadeUp" delay={0.6}>
+                    <AnimatedSection animation="fadeUp" delay={0.3}>
                       <div className="mb-8">
                         <h3 className="text-xl font-semibold text-neutral-900 mb-4">
                           Key Benefits:
@@ -253,7 +253,7 @@ export default function ServicesPage() {
                               key={benefitIndex}
                               className="flex items-start text-neutral-600 hover:text-primary-600 transition-colors duration-300 cursor-default"
                               style={{
-                                animationDelay: `${benefitIndex * 0.15}s`,
+                                animationDelay: `${benefitIndex * 0.1}s`,
                                 animation: "fadeInUp 0.6s ease-out forwards",
                                 opacity: 0,
                               }}
@@ -266,7 +266,7 @@ export default function ServicesPage() {
                       </div>
                     </AnimatedSection>
 
-                    <AnimatedSection animation="scale" delay={0.7}>
+                    <AnimatedSection animation="scale" delay={0.35}>
                       <Link href="/contact">
                         <Button
                           variant="primary"
@@ -281,7 +281,7 @@ export default function ServicesPage() {
                   {/* Image */}
                   <AnimatedSection
                     animation={index % 2 === 0 ? "slideLeft" : "slideRight"}
-                    delay={0.4}
+                    delay={0.2}
                     className={
                       index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
                     }
@@ -321,7 +321,7 @@ export default function ServicesPage() {
               <AnimatedSection
                 key={index}
                 animation="scale"
-                delay={index * 0.2}
+                delay={index * 0.1}
               >
                 <Card className="p-6 text-center bg-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group cursor-pointer">
                   <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-colors duration-300">
@@ -346,18 +346,18 @@ export default function ServicesPage() {
       <AnimatedSection animation="fadeUp">
         <section className="py-20 lg:py-32 bg-primary-600 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <AnimatedSection animation="fadeUp" delay={0.2}>
+            <AnimatedSection animation="fadeUp" delay={0.1}>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Ready to Get Started?
               </h2>
             </AnimatedSection>
-            <AnimatedSection animation="fadeUp" delay={0.4}>
+            <AnimatedSection animation="fadeUp" delay={0.2}>
               <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
                 Contact us today for a free, no-obligation estimate. We&apos;ll
                 help you choose the right services for your property.
               </p>
             </AnimatedSection>
-            <AnimatedSection animation="scale" delay={0.6}>
+            <AnimatedSection animation="scale" delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
                   <Button
