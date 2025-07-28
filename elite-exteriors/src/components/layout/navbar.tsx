@@ -53,7 +53,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-white/70 backdrop-blur-md shadow-lg border-b border-neutral-200"
-          : "bg-sky-800/50 backdrop-blur-md "
+          : "bg-sky-600/50 backdrop-blur-md "
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,12 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg uppercase lg:text-xl font-heading text-sky-800 font-bold text-neutral-900">
+                <span
+                  className={cn(
+                    "text-lg uppercase lg:text-xl font-heading font-bold transition-colors duration-200",
+                    isScrolled ? "text-sky-600" : "text-white"
+                  )}
+                >
                   Elite Exteriors
                 </span>
               </div>

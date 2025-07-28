@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { BlogCard } from "@/components/blog/BlogCard";
-import { NewsletterSignup } from "@/components/blog/NewsletterSignup";
 import AnimatedSection from "@/components/ui/animated-section";
 import { BlogClientWrapper } from "@/components/blog/BlogClientWrapper";
 import { getFeaturedPosts, getLatestPosts } from "@/data/blog-posts";
@@ -79,7 +78,7 @@ export default function BlogPage() {
         datePublished: post.publishedAt,
         author: {
           "@type": "Person",
-          name: post.author.name,
+          name: post.author?.name || "Elite Exteriors Team",
         },
         publisher: {
           "@type": "Organization",
@@ -172,11 +171,6 @@ export default function BlogPage() {
 
           {/* Blog Client Wrapper - Contains search, filters, and posts */}
           <BlogClientWrapper />
-
-          {/* Newsletter Signup */}
-          <AnimatedSection className="mt-16">
-            <NewsletterSignup />
-          </AnimatedSection>
 
           {/* SEO Content Section */}
           <AnimatedSection className="mt-16">

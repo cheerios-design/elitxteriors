@@ -5,8 +5,12 @@ import { Button } from "@/components/ui/button";
 
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    // Set initial window width
+    setWindowWidth(window.innerWidth);
+
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);
@@ -15,9 +19,17 @@ export default function BackToTop() {
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    window.addEventListener("resize", handleResize, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -29,11 +41,12 @@ export default function BackToTop() {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 transition-all duration-300 transform ${
+      className={`fixed bottom-16 left-1/2 transform -translate-x-1/2 md:bottom-15 md:left-auto md:transform-none z-50 transition-all duration-300 ${
         isVisible
-          ? "translate-y-0 opacity-100 scale-100"
+          ? "translate-y-0 opacity-80 scale-100"
           : "translate-y-16 opacity-0 scale-75 pointer-events-none"
       }`}
+      style={{ right: windowWidth >= 768 ? "220px" : "auto" }}
     >
       <Button
         onClick={scrollToTop}

@@ -85,7 +85,7 @@ export function HeroSection() {
             loop
             playsInline
             className="w-full h-full object-cover"
-            poster="/assets/images/hero-poster.jpg"
+            poster="/assets/images/services/commercial-pressure-washing.webp"
           >
             <source src="/assets/videos/overview.mp4" type="video/mp4" />
           </video>
@@ -93,7 +93,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative top-45 w-fit z-20 container rounded-2xl bg-sky-100/10 backdrop-blur-sm mx-auto py-2 px-2 sm:px-6 lg:px-8 text-center">
+      <div className="relative top-5 md:top-25 w-fit z-20 container rounded-2xl bg-sky-100/10 backdrop-blur-sm mx-auto px-2 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1
             ref={titleRef}

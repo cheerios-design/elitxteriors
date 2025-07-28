@@ -83,6 +83,30 @@ export function BeforeAfterSection() {
     setSliderPosition(Math.max(0, Math.min(100, position)));
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+
+    e.preventDefault(); // Prevent scrolling while dragging
+    const rect = e.currentTarget.getBoundingClientRect();
+    const touch = e.touches[0];
+    const position = ((touch.clientX - rect.left) / rect.width) * 100;
+    setSliderPosition(Math.max(0, Math.min(100, position)));
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const position = ((e.clientX - rect.left) / rect.width) * 100;
+    setSliderPosition(Math.max(0, Math.min(100, position)));
+  };
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const position = ((e.clientX - rect.left) / rect.width) * 100;
+    setSliderPosition(Math.max(0, Math.min(100, position)));
+  };
+
   const openModal = (imageSrc: string, title: string) => {
     setSelectedImage(imageSrc);
     setImageTitle(title);
@@ -145,11 +169,19 @@ export function BeforeAfterSection() {
             <div key={index} className="before-after-item mb-12">
               {/* Image Comparison */}
               <div
-                className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-col-resize select-none"
+                className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-col-resize select-none touch-none"
                 onMouseMove={handleMouseMove}
                 onMouseDown={() => setIsDragging(true)}
                 onMouseUp={() => setIsDragging(false)}
                 onMouseLeave={() => setIsDragging(false)}
+                onClick={handleClick}
+                onTouchStart={() => setIsDragging(true)}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={() => setIsDragging(false)}
+                onPointerMove={handlePointerMove}
+                onPointerDown={() => setIsDragging(true)}
+                onPointerUp={() => setIsDragging(false)}
+                onPointerLeave={() => setIsDragging(false)}
               >
                 {/* After Image (Background) */}
                 <Image

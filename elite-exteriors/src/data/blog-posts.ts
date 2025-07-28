@@ -51,7 +51,7 @@ At Elite Exteriors Pressure Washing, we understand the unique challenges posed b
 Contact us today for a free estimate and let us help you keep your home fresh, clean, and protected from the damaging effects of Chesapeake's humidity!
     `,
     featuredImage: "/assets/images/blog/chesapeake-humidity-featured.jpg",
-    author: blogAuthors.find((a) => a.name === "Sam MC")!,
+    author: blogAuthors.find((a) => a.name === "Sam Daramroei")!,
     publishedAt: "2024-02-22",
     readingTime: 3,
     category: blogCategories.find((c) => c.id === "local-insights")!,
@@ -128,7 +128,7 @@ Routine pressure washing is essential for maintaining the curb appeal of your ho
 Contact Elite Exteriors today for a free estimate and let us help you keep your driveway looking its best!
     `,
     featuredImage: "/assets/images/blog/driveway-cleaning-featured.jpg",
-    author: blogAuthors.find((a) => a.name === "Sam MC")!,
+    author: blogAuthors.find((a) => a.name === "Sam Daramroei")!,
     publishedAt: "2024-02-22",
     readingTime: 2,
     category: blogCategories.find((c) => c.id === "pressure-washing")!,
@@ -204,7 +204,7 @@ Contrary to common belief, pressure washing can be performed during winter in re
 At Elite Exteriors Pressure Washing, we understand the unique climatic conditions of Hampton Roads and tailor our services accordingly. Contact us today to book your pressure washing appointment!
     `,
     featuredImage: "/assets/images/blog/seasonal-pressure-washing-featured.jpg",
-    author: blogAuthors.find((a) => a.name === "Sam MC")!,
+    author: blogAuthors.find((a) => a.name === "Sam Daramroei")!,
     publishedAt: "2024-02-22",
     readingTime: 2,
     category: blogCategories.find((c) => c.id === "seasonal-maintenance")!,
