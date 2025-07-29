@@ -30,12 +30,12 @@ const services = [
     features: ["Gutter Cleaning", "Downspout Service", "Gutter Guards"],
   },
   {
-    title: "Commercial Services",
+    title: "Handyman Services",
     description:
-      "Professional exterior cleaning services for commercial properties and businesses.",
+      "Professional handyman services including general contracting, painting, electrical, and more.",
     image: "/assets/images/services/commercial-pressure-washing.webp",
-    href: "/services",
-    features: ["Building Washing", "Parking Lots", "Storefront Cleaning"],
+    href: "/handyman",
+    features: ["General Contracting", "Painting & Tiling", "Electrical Work"],
   },
   {
     title: "Lawn Care",

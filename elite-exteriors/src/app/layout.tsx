@@ -19,10 +19,11 @@ export const metadata: Metadata = {
     template: "%s | Elite Exteriors",
   },
   description:
-    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Ahmet & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
+    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, handyman services, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Ahmet & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
   keywords: [
     "pressure washing",
     "gutter cleaning",
+    "handyman services",
     "Christmas lights",
     "lawn care",
     "exterior cleaning",
@@ -247,6 +248,15 @@ export default function RootLayout({
                       name: "Gutter Cleaning",
                       description:
                         "Complete gutter cleaning and maintenance services",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Handyman Services",
+                      description:
+                        "Professional handyman services including general contracting, painting, electrical, and carpentry work",
                     },
                   },
                   {

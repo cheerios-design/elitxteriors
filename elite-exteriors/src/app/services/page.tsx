@@ -56,7 +56,7 @@ const services = [
     title: "Christmas Light Installation",
     description:
       "Professional Christmas light installation and removal services to make your holidays bright and stress-free.",
-    image: "/assets/images/services/commercial-pressure-washing.webp",
+    image: "/assets/images/blog/christmas-lights-featured.jpg",
     features: [
       "Custom Light Design",
       "Professional Installation",
