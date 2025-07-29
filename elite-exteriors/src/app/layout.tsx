@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://elitxteriors.com"),
   title: {
     default:
       "Elite Exteriors - Professional Pressure Washing & Exterior Services in Hampton Roads, VA",

@@ -2,8 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import AnimatedSection from "@/components/ui/animated-section";
 import { CheckCircle, Phone, Mail, MapPin, Globe } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Dynamic import for GSAP-heavy component
+const AnimatedSection = dynamic(
+  () => import("@/components/ui/animated-section"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-100 h-8 rounded mb-4" />
+    ),
+  }
+);
 
 export const metadata: Metadata = {
   title: "Handyman Services - The Handy Handyman | Elite Exteriors",
