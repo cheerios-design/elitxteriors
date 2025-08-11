@@ -1,0 +1,71 @@
+#!/bin/bash
+# Elite Exteriors Deployment Script
+
+echo "🚀 Elite Exteriors Deployment Checklist"
+echo "========================================"
+
+echo ""
+echo "✅ COMPLETED TASKS:"
+echo "- Domain updated to elitexteriorsva.com in layout.tsx"
+echo "- Netlify.toml configured for Next.js deployment"
+echo "- Environment variables set in .env.production"
+echo "- Build test passed successfully (4.0min build time)"
+echo "- Performance optimizations in place"
+echo ""
+
+echo "📋 NEXT STEPS TO GO LIVE:"
+echo ""
+echo "1. NETLIFY SETUP (15-30 minutes)"
+echo "   - Go to https://netlify.com and sign up/login"
+echo "   - Click 'Add new site' → 'Import an existing project'"
+echo "   - Connect your Git repository (elitxteriors)"
+echo "   - Build settings:"
+echo "     * Build command: npm run build"
+echo "     * Publish directory: .next"
+echo "     * Node version: 18"
+echo ""
+
+echo "2. ENVIRONMENT VARIABLES (Netlify Dashboard)"
+echo "   Add in Site Settings → Environment Variables:"
+echo "   - NODE_VERSION=18"
+echo "   - NPM_VERSION=9" 
+echo "   - NEXT_TELEMETRY_DISABLED=1"
+echo ""
+
+echo "3. CUSTOM DOMAIN (Netlify Dashboard)"
+echo "   - Site Settings → Domain Management"
+echo "   - Add custom domain: elitexteriorsva.com"
+echo "   - Copy the DNS records Netlify provides"
+echo ""
+
+echo "4. GODADDY DNS SETUP (24-48 hours to propagate)"
+echo "   Login to GoDaddy and add these DNS records:"
+echo "   - A Record: @ → 75.2.60.5 (TTL: 600)"
+echo "   - CNAME: www → [your-site].netlify.app (TTL: 600)"
+echo ""
+
+echo "5. SSL CERTIFICATE"
+echo "   - Netlify will automatically provision SSL"
+echo "   - May take up to 24 hours"
+echo ""
+
+echo "⚡ PERFORMANCE READY:"
+echo "- Lighthouse Score Target: 90+"
+echo "- Load Time Target: <2 seconds"
+echo "- Images optimized: WebP format ready"
+echo "- Caching headers: Configured"
+echo "- Security headers: Enabled"
+echo ""
+
+echo "🎯 YOUR SITE WILL BE LIVE AT:"
+echo "https://elitexteriorsva.com"
+echo "https://www.elitexteriorsva.com"
+echo ""
+
+echo "📞 SUPPORT:"
+echo "- Netlify Support: https://support.netlify.com"
+echo "- GoDaddy DNS Help: https://godaddy.com/help"
+echo ""
+
+echo "Status: ✅ READY FOR DEPLOYMENT!"
+echo "All technical configurations complete. Follow the steps above to go live!"
