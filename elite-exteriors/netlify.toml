@@ -1,20 +1,19 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "elite-exteriors/.next"
   
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
 
-# Next.js redirects and rewrites
+# Essential plugin for Next.js on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Next.js static files
 [[redirects]]
   from = "/_next/static/*"
   to = "/_next/static/:splat"
-  status = 200
-  
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
   status = 200
 
 # Security headers
