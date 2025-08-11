@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://elitxteriors.com"),
+  metadataBase: new URL("https://elitexteriorsva.com"),
   title: {
     default:
       "Elite Exteriors - Professional Pressure Washing & Exterior Services in Hampton Roads, VA",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.elitxteriors.com",
+    url: "https://elitexteriorsva.com",
     siteName: "Elite Exteriors",
     title:
       "Elite Exteriors - Professional Pressure Washing Services in Hampton Roads",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "Family-run business providing exceptional pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Virginia. Founded by Ahmet & Gaby, serving Hampton Roads area.",
     images: [
       {
-        url: "https://www.elitxteriors.com/images/elite-exteriors-og-image.jpg",
+        url: "https://elitexteriorsva.com/images/elite-exteriors-og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Elite Exteriors - Professional Exterior Cleaning Hampton Roads",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     description:
       "Trusted family-run pressure washing business in Hampton Roads, VA. Professional exterior cleaning services.",
     images: [
-      "https://www.elitxteriors.com/images/elite-exteriors-twitter-image.jpg",
+      "https://elitexteriorsva.com/images/elite-exteriors-twitter-image.jpg",
     ],
   },
   robots: {
@@ -175,9 +175,9 @@ export default function RootLayout({
               name: "Elite Exteriors",
               description:
                 "Professional pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia",
-              url: "https://www.elitxteriors.com",
+              url: "https://elitexteriorsva.com",
               telephone: "+1-757-796-7240",
-              email: "info@elitxteriors.com",
+              email: "info@elitexteriorsva.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "109G Gainsborough Square #711",
