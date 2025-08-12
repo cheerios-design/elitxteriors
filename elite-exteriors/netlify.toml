@@ -10,9 +10,15 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Domain redirects
+# Force apex domain redirect to www
 [[redirects]]
   from = "https://elitexteriorsva.com/*"
+  to = "https://www.elitexteriorsva.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://elitexteriorsva.com/*"
   to = "https://www.elitexteriorsva.com/:splat"
   status = 301
   force = true
