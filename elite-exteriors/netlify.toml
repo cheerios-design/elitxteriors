@@ -10,6 +10,13 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Domain redirects
+[[redirects]]
+  from = "https://elitexteriorsva.com/*"
+  to = "https://www.elitexteriorsva.com/:splat"
+  status = 301
+  force = true
+
 # Next.js static files
 [[redirects]]
   from = "/_next/static/*"
