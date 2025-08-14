@@ -73,7 +73,7 @@ export function TestimonialsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 lg:py-32 bg-gradient-to-br from-white to-sky-500/30 relative overflow-hidden"
+      className="py-20 lg:py-32 bg-white relative overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

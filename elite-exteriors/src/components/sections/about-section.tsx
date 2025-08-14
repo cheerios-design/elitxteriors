@@ -223,50 +223,118 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div
-          ref={statsRef}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
-        >
+        {/* Stats - Unified Block */}
+        <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 mb-20">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-item text-center p-6 bg-sky-700 rounded-2xl shadow-lg border border-neutral-200"
+              className={`stat-item text-center p-6 bg-sky-700 shadow-lg
+                ${
+                  index === 0
+                    ? "rounded-tl-2xl lg:rounded-l-2xl lg:rounded-tr-none"
+                    : ""
+                }
+                ${index === 1 ? "rounded-tr-2xl lg:rounded-none" : ""}
+                ${index === 2 ? "rounded-bl-2xl lg:rounded-none" : ""}
+                ${
+                  index === 3
+                    ? "rounded-br-2xl lg:rounded-r-2xl lg:rounded-bl-none"
+                    : ""
+                }
+              `}
             >
               <div className="heading-secondary text-3xl lg:text-4xl text-white mb-2">
                 {stat.number}
               </div>
-              <div className="body-text text-white font-medium">
-                {stat.label}
-              </div>
+              <div className="text-white font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Values */}
+        {/* Values - Unified Block */}
         <div className="text-center mb-12">
           <h3 className="heading-secondary text-2xl lg:text-3xl text-neutral-900 mb-4">
             Our Core Values
           </h3>
-          <p className="body-text text-neutral-700 max-w-2xl mx-auto">
+          <p className="text-neutral-700 max-w-2xl mx-auto">
             What sets us apart and drives our commitment to excellence
           </p>
         </div>
 
         <div
           ref={valuesRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         >
           {values.map((value, index) => (
             <div
               key={index}
-              className="value-item text-center p-6 bg-sky-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-sky-800"
+              className={`value-item text-center p-6 bg-sky-700 shadow-lg hover:bg-sky-800 transition-all duration-300
+                ${
+                  index === 0
+                    ? "rounded-tl-2xl md:rounded-bl-2xl lg:rounded-l-2xl lg:rounded-bl-none"
+                    : ""
+                }
+                ${
+                  index === 1
+                    ? "rounded-tr-2xl md:rounded-br-2xl lg:rounded-none"
+                    : ""
+                }
+                ${
+                  index === 2
+                    ? "rounded-bl-2xl md:rounded-tl-2xl lg:rounded-none"
+                    : ""
+                }
+                ${
+                  index === 3
+                    ? "rounded-br-2xl md:rounded-tr-2xl lg:rounded-r-2xl lg:rounded-tl-none"
+                    : ""
+                }
+              `}
             >
-              <div className="mb-4 flex justify-center">{value.icon}</div>
+              <div className="mb-4 flex justify-center">
+                <div className="w-16 h-16 bg-sky-100 rounded-xl flex items-center justify-center">
+                  {index === 0 && (
+                    <svg
+                      className="w-8 h-8 text-sky-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+                    </svg>
+                  )}
+                  {index === 1 && (
+                    <svg
+                      className="w-8 h-8 text-sky-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                    </svg>
+                  )}
+                  {index === 2 && (
+                    <svg
+                      className="w-8 h-8 text-sky-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z" />
+                    </svg>
+                  )}
+                  {index === 3 && (
+                    <svg
+                      className="w-8 h-8 text-sky-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M2.284 22.158c.001.95.679 1.752 1.62 1.792 1.31.055 2.623.022 3.935.022.954 0 1.786-.865 1.76-1.954-.029-1.221.018-2.445.029-3.667l.045-4.988c.003-.305.046-.362.335-.44a4.242 4.242 0 0 1 2.013-.067c1.23.262 2.129 1.21 2.261 2.46.066.62.07 1.249.078 1.874.025 1.64.038 3.28.054 4.921.01 1.087.796 1.877 1.883 1.882 1.171.006 2.342.008 3.513.007 1.106-.002 1.895-.778 1.898-1.883.007-3.371.007-6.742.01-10.113 0-.052 0-.105-.005-.156-.03-.355-.169-.658-.483-.838a2.638 2.638 0 0 0-.695-.291 7.484 7.484 0 0 0-2.887-.123c-.743.113-1.476.293-2.213.442-.97.196-1.946.28-2.934.178-1.268-.129-2.37-.666-3.402-1.38a32.36 32.36 0 0 0-1.494-.984c-.62-.38-1.314-.505-2.03-.544-.77-.043-1.536-.063-2.293.111-.59.136-.899.479-.966 1.077a3.438 3.438 0 0 0-.021.379m7.337-6.184a3.675 3.675 0 1 0-7.35-.031 3.675 3.675 0 0 0 7.35.03zm8.335-1.81a3.673 3.673 0 0 0-3.69 3.652 3.672 3.672 0 0 0 3.67 3.697 3.678 3.678 0 0 0 3.68-3.665 3.677 3.677 0 0 0-3.66-3.685z" />
+                    </svg>
+                  )}
+                </div>
+              </div>
               <h4 className="heading-secondary text-xl text-white mb-3">
                 {value.title}
               </h4>
-              <p className="body-text text-sky-100 leading-relaxed">
+              <p className="text-sky-100 leading-relaxed">
                 {value.description}
               </p>
             </div>

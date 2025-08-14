@@ -54,7 +54,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-white/70 backdrop-blur-md shadow-lg border-b border-neutral-200"
-          : "bg-sky-600/50 backdrop-blur-md "
+          : "bg-white/95 backdrop-blur-md "
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ export function Navbar() {
                 <span
                   className={cn(
                     "heading-secondary text-lg uppercase lg:text-xl transition-colors duration-200",
-                    isScrolled ? "text-sky-600" : "text-white"
+                    isScrolled ? "text-sky-600" : "text-neutral-800"
                   )}
                 >
                   Elite Exteriors
@@ -92,15 +92,21 @@ export function Navbar() {
                 href={item.href}
                 className={cn(
                   "body-text relative px-3 py-2 text-sm transition-colors duration-200",
-                  "hover:text-primary-600",
+                  // Conditional hover states based on scroll position
+                  isScrolled
+                    ? "hover:text-primary-600"
+                    : "hover:text-primary-600",
                   "before:absolute before:bottom-0 before:left-0 before:right-0",
                   "before:h-0.5 before:bg-primary-600 before:transform before:scale-x-0",
                   "before:transition-transform before:duration-200 hover:before:scale-x-100",
+                  // Active link styling - changes based on scroll state and link status
                   isActiveLink(item.href)
-                    ? "text-primary-600 before:scale-x-100"
+                    ? isScrolled
+                      ? "text-primary-900 before:scale-x-100" // Active link when scrolled: Dark blue text + visible underline
+                      : "text-primary-600 before:scale-x-100" // Active link when not scrolled: Medium blue text + visible underline
                     : isScrolled
-                    ? "text-neutral-800"
-                    : "text-white"
+                    ? "text-primary-800" // Inactive link when scrolled: Dark gray text, no underline
+                    : "text-neutral-800" // Inactive link when not scrolled: Dark gray text, no underline
                 )}
               >
                 {item.label}
@@ -126,7 +132,7 @@ export function Navbar() {
                 "transition-colors duration-200",
                 isScrolled
                   ? "text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100"
-                  : "text-white hover:text-neutral-200 hover:bg-white/10"
+                  : "text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100"
               )}
               aria-expanded="false"
             >
