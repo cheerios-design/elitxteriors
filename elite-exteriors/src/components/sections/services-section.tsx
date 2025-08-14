@@ -104,14 +104,14 @@ export function ServicesSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+          <h2 className="heading-secondary text-3xl sm:text-4xl lg:text-5xl text-neutral-900 mb-6">
             Our
             <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
               {" "}
               Professional Services
             </span>
           </h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-700 max-w-3xl mx-auto leading-relaxed">
             From pressure washing to gutter cleaning, we provide comprehensive
             exterior maintenance services that transform and protect your
             property.
@@ -141,10 +141,10 @@ export function ServicesSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="heading-secondary text-xl text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 mb-4 leading-relaxed">
+                <p className="text-neutral-700 mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -153,10 +153,10 @@ export function ServicesSection() {
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-center text-sm text-neutral-600"
+                      className="flex items-center text-sm text-neutral-700"
                     >
                       <svg
-                        className="w-4 h-4 text-primary-500 mr-2 flex-shrink-0"
+                        className="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

@@ -32,11 +32,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           {
             "bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 shadow-md hover:shadow-lg":
               variant === "primary",
-            "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-300 border border-neutral-300":
+            "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-300 border border-neutral-400":
               variant === "secondary",
-            "border border-primary-600 text-primary-600 hover:bg-primary-50 active:bg-primary-100":
+            "border-2 border-primary-600 text-primary-600 hover:bg-primary-50 active:bg-primary-100":
               variant === "outline",
-            "text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200":
+            "text-neutral-800 hover:bg-neutral-100 active:bg-neutral-200":
               variant === "ghost",
             "text-primary-600 hover:text-primary-700 underline-offset-4 hover:underline p-0":
               variant === "link",

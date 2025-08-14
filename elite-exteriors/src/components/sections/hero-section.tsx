@@ -97,17 +97,17 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto">
           <h1
             ref={titleRef}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight"
+            className="heading-primary text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight"
           >
             Transform Your
-            <span className="block text-gradient bg-gradient-to-r from-primary-400 to-sky-400 bg-clip-text text-transparent">
+            <span className="block text-gradient bg-gradient-to-r from-primary-300 to-sky-300 bg-clip-text text-transparent">
               Exterior Spaces
             </span>
           </h1>
 
           <p
             ref={subtitleRef}
-            className="text-lg sm:text-xl lg:text-2xl text-neutral-200 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl lg:text-2xl text-neutral-100 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
             Professional pressure washing, gutter cleaning, and exterior
             maintenance services that bring new life to your property.

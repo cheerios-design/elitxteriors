@@ -176,20 +176,20 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
           {/* Content */}
           <div ref={contentRef}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+            <h2 className="heading-secondary text-3xl sm:text-4xl lg:text-5xl text-neutral-900 mb-6">
               Why Choose
               <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
                 {" "}
                 Elite Exteriors?
               </span>
             </h2>
-            <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
               With years of experience in exterior cleaning and maintenance, we
               bring professional-grade equipment and expertise to every project.
               Our team is dedicated to transforming your property while
               protecting your investment.
             </p>
-            <p className="text-neutral-600 mb-8 leading-relaxed">
+            <p className="text-neutral-700 mb-8 leading-relaxed">
               From residential homes to commercial properties, we take pride in
               delivering exceptional results that exceed expectations. Our
               eco-friendly approach ensures your property looks amazing while
@@ -231,22 +231,24 @@ export function AboutSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-item text-center p-6 bg-sky-600 rounded-2xl shadow-lg border border-neutral-200"
+              className="stat-item text-center p-6 bg-sky-700 rounded-2xl shadow-lg border border-neutral-200"
             >
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+              <div className="heading-secondary text-3xl lg:text-4xl text-white mb-2">
                 {stat.number}
               </div>
-              <div className="text-white font-medium">{stat.label}</div>
+              <div className="body-text text-white font-medium">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
 
         {/* Values */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl lg:text-3xl font-bold text-neutral-900 mb-4">
+          <h3 className="heading-secondary text-2xl lg:text-3xl text-neutral-900 mb-4">
             Our Core Values
           </h3>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
+          <p className="body-text text-neutral-700 max-w-2xl mx-auto">
             What sets us apart and drives our commitment to excellence
           </p>
         </div>
@@ -258,13 +260,13 @@ export function AboutSection() {
           {values.map((value, index) => (
             <div
               key={index}
-              className="value-item text-center p-6 bg-sky-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-sky-700"
+              className="value-item text-center p-6 bg-sky-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-sky-800"
             >
               <div className="mb-4 flex justify-center">{value.icon}</div>
-              <h4 className="text-xl font-semibold text-white mb-3">
+              <h4 className="heading-secondary text-xl text-white mb-3">
                 {value.title}
               </h4>
-              <p className="text-sky-100 leading-relaxed">
+              <p className="body-text text-sky-100 leading-relaxed">
                 {value.description}
               </p>
             </div>
