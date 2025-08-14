@@ -19,6 +19,7 @@ netlify login
 5. Configure build settings:
    - **Build command:** `npm run build`
    - **Publish directory:** `.next`
+   - **Base directory:** `elite-exteriors`
    - **Node version:** `18`
 
 ### 3. Environment Variables (Netlify Dashboard)

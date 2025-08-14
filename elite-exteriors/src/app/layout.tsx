@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Layout } from "@/components/layout/layout";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import BackToTop from "@/components/ui/back-to-top";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://elitexteriorsva.com"),
@@ -163,8 +156,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en">
       <head>
+        {/* Adobe Fonts */}
+        <link rel="stylesheet" href="https://use.typekit.net/tok5xha.css" />
         {/* Local Business Schema */}
         <script
           type="application/ld+json"

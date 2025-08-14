@@ -4,6 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  /* Adobe Font Variables */
+  --font-heading: "headline-gothic-atf-round", sans-serif;
+  --font-body: "stratos", sans-serif;
+  --font-button: "rig-solid-bold-reverse", sans-serif;
+
   /* Brand Colors - Sky Blue Primary */
   --color-primary-50: #f0f9ff;
   --color-primary-100: #e0f2fe;
@@ -47,6 +52,31 @@
   --color-accent-orange: #f97316;
   --color-accent-red: #ef4444;
   --color-accent-yellow: #eab308;
+}
+
+/* Typography System */
+/* Main headings (H1) - Lighter Weight */
+h1,
+.heading-primary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+/* Secondary headings (H2-H6) */
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-secondary {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
 }
 
 @theme inline {

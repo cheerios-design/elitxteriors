@@ -74,7 +74,7 @@ export function Navbar() {
               <div className="flex flex-col">
                 <span
                   className={cn(
-                    "text-lg uppercase lg:text-xl font-heading font-bold transition-colors duration-200",
+                    "heading-secondary text-lg uppercase lg:text-xl transition-colors duration-200",
                     isScrolled ? "text-sky-600" : "text-white"
                   )}
                 >
@@ -91,7 +91,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative px-3 py-2 text-sm font-medium transition-colors duration-200",
+                  "body-text relative px-3 py-2 text-sm transition-colors duration-200",
                   "hover:text-primary-600",
                   "before:absolute before:bottom-0 before:left-0 before:right-0",
                   "before:h-0.5 before:bg-primary-600 before:transform before:scale-x-0",
@@ -99,7 +99,7 @@ export function Navbar() {
                   isActiveLink(item.href)
                     ? "text-primary-600 before:scale-x-100"
                     : isScrolled
-                    ? "text-neutral-700"
+                    ? "text-neutral-800"
                     : "text-white"
                 )}
               >
@@ -111,7 +111,7 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link href="/contact">
-              <Button variant="primary" size="md">
+              <Button variant="primary" size="md" className="button">
                 Get Free Quote
               </Button>
             </Link>
@@ -171,11 +171,11 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200",
+                  "body-text block px-3 py-2 text-base rounded-md transition-colors duration-200",
                   "hover:bg-primary-50 hover:text-primary-600",
                   isActiveLink(item.href)
                     ? "bg-primary-50 text-primary-600"
-                    : "text-neutral-700"
+                    : "text-neutral-800"
                 )}
               >
                 {item.label}
@@ -183,7 +183,7 @@ export function Navbar() {
             ))}
             <div className="pt-4 border-t border-neutral-200">
               <Link href="/contact" className="block">
-                <Button variant="primary" size="md" className="w-full">
+                <Button variant="primary" size="md" className="button w-full">
                   Get Free Quote
                 </Button>
               </Link>

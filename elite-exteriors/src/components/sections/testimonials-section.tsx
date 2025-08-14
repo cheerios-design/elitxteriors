@@ -78,14 +78,14 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+          <h2 className="heading-secondary text-3xl sm:text-4xl lg:text-5xl text-neutral-900 mb-6">
             What Our
             <span className="text-gradient bg-gradient-to-r from-primary-600 to-sky-600 bg-clip-text text-transparent">
               {" "}
               Customers Say
             </span>
           </h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-700 max-w-3xl mx-auto leading-relaxed">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied
             customers have to say about our services.
           </p>
@@ -112,14 +112,14 @@ export function TestimonialsSection() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-neutral-700 mb-6 leading-relaxed italic">
+              <blockquote className="text-neutral-800 mb-6 leading-relaxed italic">
                 &ldquo;{testimonial.text}&rdquo;
               </blockquote>
 
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-primary-600 font-semibold text-lg">
+                  <span className="text-primary-700 font-semibold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
@@ -127,7 +127,7 @@ export function TestimonialsSection() {
                   <div className="font-semibold text-neutral-900">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-neutral-600">
+                  <div className="text-sm text-neutral-700">
                     {testimonial.location}
                   </div>
                 </div>
@@ -138,8 +138,8 @@ export function TestimonialsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <div className="bg-primary-600 text-white rounded-2xl p-8 lg:p-12">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+          <div className="bg-primary-700 text-white rounded-2xl p-8 lg:p-12">
+            <h3 className="heading-secondary text-2xl lg:text-3xl mb-4">
               Ready to Join Our Happy Customers?
             </h3>
             <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
@@ -148,10 +148,10 @@ export function TestimonialsSection() {
               needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary-600 hover:bg-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <button className="bg-white text-primary-700 hover:bg-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Free Estimate
               </button>
-              <button className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Call (757) 769-7240
               </button>
             </div>
