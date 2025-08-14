@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Phone, Mail, MapPin, Globe } from "lucide-react";
+import { CheckCircle, Phone, Mail, MapPin } from "lucide-react";
 import dynamic from "next/dynamic";
 
 // Dynamic import for GSAP-heavy component
@@ -40,12 +40,6 @@ export const metadata: Metadata = {
 };
 
 const residentialServices = [
-  {
-    title: "General Contracting",
-    description:
-      "Complete project management and construction services for your home improvement needs.",
-    icon: "🏗️",
-  },
   {
     title: "Painting & Tiling",
     description:
@@ -147,18 +141,6 @@ export default function HandymanPage() {
                   Get Free Quote
                 </Button>
               </div>
-
-              {/* Contact Info */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto text-sm">
-                <div className="flex items-center justify-center md:justify-start">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <span>info@elitxteriors.com</span>
-                </div>
-                <div className="flex items-center justify-center md:justify-end">
-                  <Globe className="w-4 h-4 mr-2" />
-                  <span>www.elitxteriors.com/handyman</span>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -241,10 +223,6 @@ export default function HandymanPage() {
                     <div className="flex items-center">
                       <Mail className="w-5 h-5 mr-3 text-blue-200" />
                       <span>info@elitxteriors.com</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Globe className="w-5 h-5 mr-3 text-blue-200" />
-                      <span>www.elitxteriors.com/handyman</span>
                     </div>
                   </div>
                 </div>

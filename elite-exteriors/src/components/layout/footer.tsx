@@ -88,10 +88,9 @@ export function Footer() {
               </div>
             </div>
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              Family-run business founded by Ahmet & Gaby, providing
-              professional pressure washing, gutter cleaning, Christmas light
-              installation, and lawn care services throughout Hampton Roads,
-              Virginia.
+              Family-run business founded by Matt & Gaby, providing professional
+              pressure washing, gutter cleaning, Christmas light installation,
+              and lawn care services throughout Hampton Roads, Virginia.
             </p>
 
             {/* BBB Seal */}

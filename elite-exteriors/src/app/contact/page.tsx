@@ -108,7 +108,7 @@ export default function ContactPage() {
             </AnimatedSection>
             <AnimatedSection animation="fadeUp" delay={0.2}>
               <p className="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Ready to transform your property? Contact Ahmet & Gaby&apos;s
+                Ready to transform your property? Contact Matt & Gaby&apos;s
                 family-run business for a free estimate and experience the Elite
                 Exteriors difference in Hampton Roads.
               </p>
@@ -321,7 +321,7 @@ export default function ContactPage() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <span className="text-primary-200 mr-2">✓</span>
-                      Family-run business founded by Ahmet & Gaby
+                      Family-run business founded by Matt & Gaby
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary-200 mr-2">✓</span>

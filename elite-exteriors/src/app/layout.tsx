@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Elite Exteriors",
   },
   description:
-    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, handyman services, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Ahmet & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
+    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, handyman services, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Matt & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
   keywords: [
     "pressure washing",
     "gutter cleaning",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     "family business",
     "property maintenance",
   ],
-  authors: [{ name: "Elite Exteriors" }, { name: "Ahmet" }, { name: "Gaby" }],
-  creator: "Elite Exteriors - Ahmet & Gaby",
+  authors: [{ name: "Elite Exteriors" }, { name: "Matt" }, { name: "Gaby" }],
+  creator: "Elite Exteriors - Matt & Gaby",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title:
       "Elite Exteriors - Professional Pressure Washing Services in Hampton Roads",
     description:
-      "Family-run business providing exceptional pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Virginia. Founded by Ahmet & Gaby, serving Hampton Roads area.",
+      "Family-run business providing exceptional pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Virginia. Founded by Matt & Gaby, serving Hampton Roads area.",
     images: [
       {
         url: "https://elitexteriorsva.com/images/elite-exteriors-og-image.jpg",
@@ -215,7 +215,7 @@ export default function RootLayout({
               founder: [
                 {
                   "@type": "Person",
-                  name: "Ahmet",
+                  name: "Matt",
                   nationality: "Turkish",
                 },
                 {

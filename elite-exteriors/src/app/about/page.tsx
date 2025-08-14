@@ -7,15 +7,15 @@ export const metadata: Metadata = {
   title:
     "About Us - Elite Exteriors - Professional Pressure Washing & Exterior Services in Hampton Roads, VA",
   description:
-    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Ahmet & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
+    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Matt & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
 };
 
 const teamMembers = [
   {
-    name: "Ahmet",
+    name: "Matt",
     role: "Co-Founder & Owner",
-    image: "/assets/images/team/ahmet.jpg", // Placeholder
-    bio: "Co-founder of Elite Exteriors, Ahmet brings international perspective and dedication to quality service. Originally from Turkey, he's committed to building a trusted family business in Hampton Roads.",
+    image: "/assets/images/team/matt.jpg", // Placeholder
+    bio: "Co-founder of Elite Exteriors, Matt brings international perspective and dedication to quality service. Originally from Turkey, he's committed to building a trusted family business in Hampton Roads.",
   },
   {
     name: "Gaby",
@@ -110,8 +110,8 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-                Elite Exteriors is a trusted family-run business founded by
-                Ahmet & Gaby, dedicated to providing top-notch pressure washing,
+                Elite Exteriors is a trusted family-run business founded by Matt
+                & Gaby, dedicated to providing top-notch pressure washing,
                 gutter cleaning, Christmas light installation, and lawn care
                 services in Hampton Roads, Virginia. We proudly serve Virginia
                 Beach, Chesapeake, Norfolk, Suffolk, Newport News, Hampton, and
@@ -151,12 +151,11 @@ export default function AboutPage() {
             </h2>
             <div className="text-xl text-neutral-600 mb-8 leading-relaxed">
               <p className="mb-6">
-                Elite Exteriors is a trusted family-run business founded by
-                Ahmet and Gaby, proudly serving Virginia and the Hampton Roads
-                area. Founded by a diverse international couple - Ahmet from
-                Turkey and Gaby from Zimbabwe - we bring a unique perspective
-                and unwavering commitment to excellence in every service we
-                provide.
+                Elite Exteriors is a trusted family-run business founded by Matt
+                and Gaby, proudly serving Virginia and the Hampton Roads area.
+                Founded by a diverse international couple - Matt from Turkey and
+                Gaby from Zimbabwe - we bring a unique perspective and
+                unwavering commitment to excellence in every service we provide.
               </p>
               <p className="mb-6">
                 We specialize in providing top-notch pressure washing, gutter

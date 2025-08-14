@@ -24,11 +24,11 @@ export const blogAuthors: BlogAuthor[] = [
     },
   },
   {
-    id: "ahmet-seymen",
-    name: "Ahmet Seymen",
+    id: "matt-seymen",
+    name: "Matt Seymen",
     role: "Founder & CEO",
     bio: "Founder and CEO of Elite Exteriors, bringing innovation and expertise to the pressure washing industry in Hampton Roads. Passionate about helping homeowners maintain beautiful, clean properties.",
-    avatar: "/assets/team/ahmet-seymen.jpg",
+    avatar: "/assets/team/matt-seymen.jpg",
     social: {
       email: "info@elitxteriors.com",
     },
