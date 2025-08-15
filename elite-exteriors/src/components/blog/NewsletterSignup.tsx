@@ -74,7 +74,7 @@ export function NewsletterSignup({
               placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-transparent text-sm"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm placeholder-gray-600 bg-white"
               required
             />
             <button
@@ -116,7 +116,7 @@ export function NewsletterSignup({
               placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-transparent text-sm"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm placeholder-gray-600 bg-white"
               required
             />
             <button
@@ -156,15 +156,15 @@ export function NewsletterSignup({
             <p className="text-green-100">{message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-3">
+          <form onSubmit={handleSubmit} className="max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
                 <input
                   type="text"
                   placeholder="Your name (optional)"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                  className="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-600 bg-white border-2 border-white/20 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-white text-lg"
                 />
               </div>
               <div className="flex-1">
@@ -173,14 +173,14 @@ export function NewsletterSignup({
                   placeholder="Your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                  className="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-600 bg-white border-2 border-white/20 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-white text-lg"
                   required
                 />
               </div>
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="bg-white text-sky-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 whitespace-nowrap"
+                className="bg-white text-sky-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 whitespace-nowrap text-lg border-2 border-white"
               >
                 {status === "loading" ? "Subscribing..." : "Subscribe"}
               </button>
