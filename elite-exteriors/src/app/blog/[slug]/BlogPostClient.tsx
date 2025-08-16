@@ -218,9 +218,26 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
 
                   {/* Content */}
                   <div
-                    className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-headings:mb-0 prose-p:mb-0 prose-headings:mt-0 prose-p:mt-0 [&>*]:mb-0 [&>*]:mt-0"
+                    className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
+                    style={
+                      {
+                        "--tw-prose-body": "rgb(55 65 81)",
+                        "--tw-prose-headings": "rgb(17 24 39)",
+                      } as React.CSSProperties
+                    }
                     dangerouslySetInnerHTML={{
-                      __html: post.content.replace(/\n/g, "<br />"),
+                      __html: post.content
+                        .replace(/\n/g, "<br />")
+                        .replace(/mb-\d+/g, "mb-0")
+                        .replace(/mt-\d+/g, "mt-0")
+                        .replace(
+                          /class="([^"]*)\s*mb-\d+([^"]*)"/g,
+                          'class="$1 mb-0 $2"'
+                        )
+                        .replace(
+                          /class="([^"]*)\s*mt-\d+([^"]*)"/g,
+                          'class="$1 mt-0 $2"'
+                        ),
                     }}
                   />
 
