@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/assets/images/blog/blog-hero.jpg"],
   },
   alternates: {
-    canonical: "https://elitxteriors.com/blog",
+    canonical: "https://elitexteriorsva.com/blog",
   },
 };
 
@@ -57,14 +57,14 @@ export default function BlogPage() {
     name: "Elite Exteriors Blog",
     description:
       "Expert home maintenance tips and guides for Hampton Roads homeowners",
-    url: "https://elitxteriors.com/blog",
+    url: "https://elitexteriorsva.com/blog",
     publisher: {
       "@type": "Organization",
       name: "Elite Exteriors",
-      url: "https://elitxteriors.com",
+      url: "https://elitexteriorsva.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://elitxteriors.com/assets/logos/mainlogo.webp",
+        url: "https://elitexteriorsva.com/assets/logos/mainlogo.webp",
       },
     },
     mainEntity: {
@@ -74,7 +74,7 @@ export default function BlogPage() {
         position: index + 1,
         headline: post.title,
         description: post.excerpt,
-        url: `https://elitxteriors.com/blog/${post.slug}`,
+        url: `https://elitexteriorsva.com/blog/${post.slug}`,
         datePublished: post.publishedAt,
         author: {
           "@type": "Person",

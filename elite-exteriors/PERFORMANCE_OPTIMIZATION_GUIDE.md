@@ -145,7 +145,7 @@ const inter = Inter({
 
 ```bash
 # .env.production
-NEXT_PUBLIC_SITE_URL=https://elitxteriors.com
+NEXT_PUBLIC_SITE_URL=https://elitexteriorsva.com
 ANALYZE=false
 ```
 

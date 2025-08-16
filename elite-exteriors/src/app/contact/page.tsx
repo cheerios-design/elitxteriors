@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: "📧",
     title: "Email",
-    details: "info@elitxteriors.com",
+    details: "info@elitexteriorsva.com",
     description: "Send us a detailed message",
   },
   {
@@ -388,7 +388,7 @@ export default function ContactPage() {
                   </Button>
                   <Button variant="outline" className="w-full">
                     <a
-                      href="mailto:info@elitxteriors.com"
+                      href="mailto:info@elitexteriorsva.com"
                       className="block w-full"
                     >
                       Email Us

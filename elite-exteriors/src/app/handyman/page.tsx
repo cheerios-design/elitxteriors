@@ -222,7 +222,7 @@ export default function HandymanPage() {
                     </div>
                     <div className="flex items-center">
                       <Mail className="w-5 h-5 mr-3 text-blue-200" />
-                      <span>info@elitxteriors.com</span>
+                      <span>handyman@elitexteriorsva.com</span>
                     </div>
                   </div>
                 </div>

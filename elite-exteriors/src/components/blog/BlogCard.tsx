@@ -57,14 +57,14 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
 
       <div className="p-6">
         {/* Author and Date */}
-        <div className="flex items-center text-sm text-gray-600 mb-3">
+        <div className="flex items-center text-xs text-gray-600 mb-3">
           <div className="flex items-center">
-            <User className="h-4 w-4 mr-1" />
+            <User className="h-3 w-3 mr-1" />
             <span>{post.author.name}</span>
           </div>
           <span className="mx-2">•</span>
           <div className="flex items-center">
-            <Calendar className="h-4 w-4 mr-1" />
+            <Calendar className="h-3 w-3 mr-1" />
             <time dateTime={post.publishedAt}>
               {formatDistanceToNow(new Date(post.publishedAt), {
                 addSuffix: true,
@@ -73,7 +73,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           </div>
           <span className="mx-2">•</span>
           <div className="flex items-center">
-            <Clock className="h-4 w-4 mr-1" />
+            <Clock className="h-3 w-3 mr-1" />
             <span>{post.readingTime} min read</span>
           </div>
         </div>

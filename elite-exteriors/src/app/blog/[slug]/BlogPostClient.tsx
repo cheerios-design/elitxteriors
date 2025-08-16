@@ -80,15 +80,15 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
     publisher: {
       "@type": "Organization",
       name: "Elite Exteriors",
-      url: "https://elitxteriors.com",
+      url: "https://elitexteriorsva.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://elitxteriors.com/assets/logos/mainlogo.webp",
+        url: "https://elitexteriorsva.com/assets/logos/mainlogo.webp",
       },
     },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
-    url: `https://elitxteriors.com/blog/${post.slug}`,
+    url: `https://elitexteriorsva.com/blog/${post.slug}`,
     keywords: post.seoKeywords,
     articleSection: post.category.name,
     wordCount: post.content.split(" ").length,
@@ -123,7 +123,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
         </header>
 
         <main className="container mx-auto px-4 py-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             {/* Article Header */}
             <AnimatedSection>
               <article className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
@@ -219,8 +219,25 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                   {/* Content */}
                   <div
                     className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
+                    style={
+                      {
+                        "--tw-prose-body": "rgb(55 65 81)",
+                        "--tw-prose-headings": "rgb(17 24 39)",
+                      } as React.CSSProperties
+                    }
                     dangerouslySetInnerHTML={{
-                      __html: post.content.replace(/\n/g, "<br />"),
+                      __html: post.content
+                        .replace(/\n/g, "<br />")
+                        .replace(/mb-\d+/g, "mb-0")
+                        .replace(/mt-\d+/g, "mt-0")
+                        .replace(
+                          /class="([^"]*)\s*mb-\d+([^"]*)"/g,
+                          'class="$1 mb-0 $2"'
+                        )
+                        .replace(
+                          /class="([^"]*)\s*mt-\d+([^"]*)"/g,
+                          'class="$1 mt-0 $2"'
+                        ),
                     }}
                   />
 

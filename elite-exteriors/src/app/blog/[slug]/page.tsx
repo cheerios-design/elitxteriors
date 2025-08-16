@@ -57,7 +57,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical:
-        post.canonicalUrl || `https://elitxteriors.com/blog/${post.slug}`,
+        post.canonicalUrl || `https://elitexteriorsva.com/blog/${post.slug}`,
     },
   };
 }
