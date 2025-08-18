@@ -10,10 +10,6 @@
 [functions]
   directory = "netlify/functions"
 
-# Plugin for form submissions
-[[plugins]]
-  package = "@netlify/plugin-form-submissions"
-
 # Essential plugin for Next.js on Netlify
 [[plugins]]
   package = "@netlify/plugin-nextjs"
