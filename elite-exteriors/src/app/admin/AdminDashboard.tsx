@@ -13,7 +13,6 @@ import {
   CheckCircle,
   XCircle,
   AlertCircle,
-  LogOut,
 } from "lucide-react";
 import { getLocalStats } from "@/lib/blog-interactions";
 import { blogPosts } from "@/data/blog-posts";
@@ -50,11 +49,6 @@ export function AdminDashboard() {
 
   const [pendingComments, setPendingComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
-
-  const handleLogout = () => {
-    localStorage.removeItem("elite_admin_session");
-    window.location.reload();
-  };
 
   const refreshData = async () => {
     setLoading(true);
@@ -203,28 +197,7 @@ export function AdminDashboard() {
   }
 
   return (
-    <div className="p-6">
-      {/* Header */}
-      <div className="mb-8">
-        <div className="flex justify-between items-start">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Blog Admin Dashboard
-            </h1>
-            <p className="text-gray-600 mt-2">
-              Manage blog interactions and moderate comments
-            </p>
-          </div>
-          <button
-            onClick={handleLogout}
-            className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors"
-          >
-            <LogOut className="h-4 w-4" />
-            <span>Logout</span>
-          </button>
-        </div>
-      </div>
-
+    <>
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
@@ -543,6 +516,6 @@ export function AdminDashboard() {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 }
