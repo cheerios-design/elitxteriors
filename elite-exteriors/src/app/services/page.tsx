@@ -8,7 +8,7 @@ import AnimatedSection from "@/components/ui/animated-section";
 export const metadata: Metadata = {
   title: "Services - Elite Exteriors",
   description:
-    "Professional exterior cleaning services including pressure washing, gutter cleaning, commercial services, and lawn care. Quality results guaranteed.",
+    "Professional exterior cleaning services including pressure washing, gutter cleaning, commercial services, and lawn care & mulching. Quality results guaranteed.",
 };
 
 const services = [
@@ -93,17 +93,17 @@ const services = [
     ],
   },
   {
-    title: "Lawn Care & Landscaping",
+    title: "Lawn Care & Mulching",
     description:
-      "Complete lawn care and landscaping services to keep your outdoor spaces beautiful and well-maintained.",
+      "Complete lawn care and mulching services to keep your outdoor spaces beautiful and well-maintained.",
     image: "/assets/images/services/lawncare.jpg",
     features: [
       "Regular Lawn Mowing",
       "Edging & Trimming",
       "Leaf Removal",
       "Seasonal Cleanup",
-      "Basic Landscaping",
       "Mulching Services",
+      "Basic Yard Maintenance",
     ],
     benefits: [
       "Maintains healthy lawn growth",

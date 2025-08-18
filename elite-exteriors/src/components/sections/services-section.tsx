@@ -38,12 +38,12 @@ const services = [
     features: ["General Contracting", "Painting & Tiling", "Electrical Work"],
   },
   {
-    title: "Lawn Care",
+    title: "Lawn Care & Mulching",
     description:
-      "Complete lawn care and landscaping services to keep your property beautiful.",
+      "Complete lawn care and mulching services to keep your property beautiful.",
     image: "/assets/images/services/lawncare.jpg",
     href: "/services",
-    features: ["Mowing", "Landscaping", "Seasonal Cleanup"],
+    features: ["Mowing", "Mulching", "Seasonal Cleanup"],
   },
 ];
 

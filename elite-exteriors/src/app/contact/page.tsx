@@ -39,7 +39,7 @@ const services = [
   "Pressure Washing",
   "Gutter Cleaning",
   "Christmas Light Installation",
-  "Lawn Care & Landscaping",
+  "Lawn Care & Mulching",
   "Deck & Patio Cleaning",
   "Driveway Cleaning",
   "Commercial Services",

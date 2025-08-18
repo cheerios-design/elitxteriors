@@ -11,7 +11,7 @@ const footerLinks = {
       label: "Christmas Light Installation",
       href: "/services#christmas-lights",
     },
-    { label: "Lawn Care", href: "/services#lawn-care" },
+    { label: "Lawn Care & Mulching", href: "/services#lawn-care" },
     { label: "Deck & Patio Cleaning", href: "/services#deck-patio" },
     { label: "Driveway Cleaning", href: "/services#driveway-cleaning" },
   ],
@@ -90,7 +90,8 @@ export function Footer() {
             <p className="text-neutral-300 mb-6 leading-relaxed">
               Family-run business founded by Matt & Gaby, providing professional
               pressure washing, gutter cleaning, Christmas light installation,
-              and lawn care services throughout Hampton Roads, Virginia.
+              and lawn care & mulching services throughout Hampton Roads,
+              Virginia.
             </p>
 
             {/* BBB Seal */}
