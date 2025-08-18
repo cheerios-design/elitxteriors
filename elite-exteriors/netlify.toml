@@ -6,6 +6,15 @@
   NODE_VERSION = "18"
   NPM_VERSION = "9"
 
+# Netlify Functions
+[functions]
+  directory = "netlify/functions"
+
+# Form notifications
+[plugins]
+  [[plugins.package]]
+    package = "@netlify/plugin-form-submissions"
+
 # Next.js redirects and rewrites
 [[redirects]]
   from = "/_next/static/*"

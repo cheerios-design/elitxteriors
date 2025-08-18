@@ -3,19 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Toaster } from "react-hot-toast";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { NewsletterSignup } from "@/components/blog/NewsletterSignup";
+import { BlogInteractions } from "@/components/blog/BlogInteractions";
+import { BlogCommentForm } from "@/components/blog/BlogCommentForm";
+import { BlogShare } from "@/components/blog/BlogShare";
 import AnimatedSection from "@/components/ui/animated-section";
-import {
-  Calendar,
-  Clock,
-  Eye,
-  Heart,
-  MessageCircle,
-  User,
-  ArrowLeft,
-  Share2,
-} from "lucide-react";
+import { Calendar, Clock, Eye, User, ArrowLeft, Share2 } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import type { BlogPost } from "@/types/blog";
 
@@ -24,48 +19,9 @@ interface BlogPostClientProps {
   relatedPosts: BlogPost[];
 }
 
-function ShareButton({ post }: { post: BlogPost }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const handleShare = () => {
-    if (typeof window !== "undefined") {
-      if (navigator.share) {
-        navigator.share({
-          title: post.title,
-          text: post.excerpt,
-          url: window.location.href,
-        });
-      } else {
-        navigator.clipboard.writeText(window.location.href);
-      }
-    }
-  };
-
-  if (!mounted) {
-    return (
-      <div className="flex items-center px-3 py-2 text-gray-600">
-        <Share2 className="h-4 w-4 mr-1" />
-        Share
-      </div>
-    );
-  }
-
-  return (
-    <button
-      onClick={handleShare}
-      className="flex items-center px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
-    >
-      <Share2 className="h-4 w-4 mr-1" />
-      Share
-    </button>
-  );
-}
-
 export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [showCommentForm, setShowCommentForm] = useState(false);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -116,7 +72,13 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
               </Link>
 
               <div className="flex items-center space-x-4">
-                <ShareButton post={post} />
+                <button
+                  onClick={() => setShowShareModal(true)}
+                  className="flex items-center px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  <Share2 className="h-4 w-4 mr-1" />
+                  Share
+                </button>
               </div>
             </div>
           </div>
@@ -183,19 +145,9 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                       <Clock className="h-4 w-4 mr-1" />
                       <span>{post.readingTime} min read</span>
                     </div>
-                    <div className="flex items-center space-x-4 mb-2">
-                      <div className="flex items-center">
-                        <Eye className="h-4 w-4 mr-1" />
-                        <span>{post.views}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Heart className="h-4 w-4 mr-1" />
-                        <span>{post.likes}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <MessageCircle className="h-4 w-4 mr-1" />
-                        <span>{post.comments.length}</span>
-                      </div>
+                    <div className="flex items-center">
+                      <Eye className="h-4 w-4 mr-1" />
+                      <span>{post.views}</span>
                     </div>
                   </div>
 
@@ -297,9 +249,31 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                       </div>
                     </div>
                   </div>
+
+                  {/* Blog Interactions */}
+                  <BlogInteractions
+                    postSlug={post.slug}
+                    postTitle={post.title}
+                    initialLikes={post.likes}
+                    initialComments={post.comments.length}
+                    initialShares={0}
+                    onCommentClick={() => setShowCommentForm(true)}
+                    onShareClick={() => setShowShareModal(true)}
+                  />
                 </div>
               </article>
             </AnimatedSection>
+
+            {/* Comment Form */}
+            {showCommentForm && (
+              <AnimatedSection>
+                <BlogCommentForm
+                  postSlug={post.slug}
+                  postTitle={post.title}
+                  onCommentSubmitted={() => setShowCommentForm(false)}
+                />
+              </AnimatedSection>
+            )}
 
             {/* Newsletter Signup */}
             <AnimatedSection>
@@ -323,6 +297,26 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             )}
           </div>
         </main>
+
+        {/* Share Modal */}
+        <BlogShare
+          postSlug={post.slug}
+          postTitle={post.title}
+          isOpen={showShareModal}
+          onClose={() => setShowShareModal(false)}
+        />
+
+        {/* Toast Notifications */}
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: "#363636",
+              color: "#fff",
+            },
+          }}
+        />
       </div>
     </>
   );
