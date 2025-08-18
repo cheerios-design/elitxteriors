@@ -6,35 +6,14 @@
   NODE_VERSION = "18"
   NPM_VERSION = "9"
 
-
 # Netlify Functions
 [functions]
   directory = "netlify/functions"
 
-# Form notifications
-[plugins]
-  [[plugins.package]]
-    package = "@netlify/plugin-form-submissions"
-
-# Essential plugin for Next.js on Netlify
+# Plugin for form submissions
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-form-submissions"
 
-# Force apex domain redirect to www
-[[redirects]]
-  from = "https://elitexteriorsva.com/*"
-  to = "https://www.elitexteriorsva.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://elitexteriorsva.com/*"
-  to = "https://www.elitexteriorsva.com/:splat"
-  status = 301
-  force = true
-
-# Next.js static files
-=======
 # Essential plugin for Next.js on Netlify
 [[plugins]]
   package = "@netlify/plugin-nextjs"
