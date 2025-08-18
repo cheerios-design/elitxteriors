@@ -13,6 +13,7 @@ import {
   CheckCircle,
   XCircle,
   AlertCircle,
+  LogOut,
 } from "lucide-react";
 import { getLocalStats } from "@/lib/blog-interactions";
 import { blogPosts } from "@/data/blog-posts";
@@ -50,11 +51,12 @@ export function AdminDashboard() {
   const [pendingComments, setPendingComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadAdminData();
-  }, []);
+  const handleLogout = () => {
+    localStorage.removeItem("elite_admin_session");
+    window.location.reload();
+  };
 
-  const loadAdminData = async () => {
+  const refreshData = async () => {
     setLoading(true);
     try {
       // Calculate real statistics from local storage
@@ -80,6 +82,37 @@ export function AdminDashboard() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const loadAdminData = async () => {
+      setLoading(true);
+      try {
+        // Calculate real statistics from local storage
+        const realStats = calculateRealStats();
+        setStats(realStats);
+
+        // Load real pending comments from Netlify Forms
+        const realComments = await loadPendingComments();
+        setPendingComments(realComments);
+      } catch (error) {
+        console.error("Error loading admin data:", error);
+        // Fallback to empty state if there's an error
+        setStats({
+          totalLikes: 0,
+          totalComments: 0,
+          totalShares: 0,
+          pendingComments: 0,
+          totalViews: 0,
+          uniqueVisitors: 0,
+        });
+        setPendingComments([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadAdminData();
+  }, []);
 
   const calculateRealStats = (): AdminStats => {
     let totalLikes = 0;
@@ -173,12 +206,23 @@ export function AdminDashboard() {
     <div className="p-6">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">
-          Blog Admin Dashboard
-        </h1>
-        <p className="text-gray-600 mt-2">
-          Manage blog interactions and moderate comments
-        </p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">
+              Blog Admin Dashboard
+            </h1>
+            <p className="text-gray-600 mt-2">
+              Manage blog interactions and moderate comments
+            </p>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors"
+          >
+            <LogOut className="h-4 w-4" />
+            <span>Logout</span>
+          </button>
+        </div>
       </div>
 
       {/* Stats Grid */}
@@ -447,7 +491,7 @@ export function AdminDashboard() {
         <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Actions</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <button
-            onClick={() => loadAdminData()}
+            onClick={refreshData}
             className="flex items-center justify-center px-4 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors"
           >
             <TrendingUp className="h-4 w-4 mr-2" />
