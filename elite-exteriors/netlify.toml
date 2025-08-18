@@ -34,21 +34,4 @@
   force = true
 
 # Next.js static files
-=======
-# Essential plugin for Next.js on Netlify
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-# Force apex domain redirect to www
-[[redirects]]
-  from = "https://elitexteriorsva.com/*"
-  to = "https://www.elitexteriorsva.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://elitexteriorsva.com/*"
-  to = "https://www.elitexteriorsva.com/:splat"
-  status = 301
-  force = true
 
