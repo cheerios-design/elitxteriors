@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AdminAuth } from "@/components/admin/AdminAuth";
+import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminDashboard } from "./AdminDashboard";
 
 export function ProtectedAdminPage() {
@@ -11,13 +12,18 @@ export function ProtectedAdminPage() {
     setIsAuthenticated(true);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("elite_admin_session");
+    setIsAuthenticated(false);
+  };
+
   if (!isAuthenticated) {
     return <AdminAuth onAuthenticated={handleAuthenticated} />;
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <AdminLayout onLogout={handleLogout}>
       <AdminDashboard />
-    </div>
+    </AdminLayout>
   );
 }
