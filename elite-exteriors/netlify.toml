@@ -27,4 +27,14 @@
   status = 301
   force = true
 
+# Security headers for admin routes
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+
 

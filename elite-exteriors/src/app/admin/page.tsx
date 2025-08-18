@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AdminDashboard } from "./AdminDashboard";
+import { ProtectedAdminPage } from "./ProtectedAdminPage";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard | Elite Exteriors",
@@ -11,9 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function AdminPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <AdminDashboard />
-    </div>
-  );
+  return <ProtectedAdminPage />;
 }
