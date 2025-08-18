@@ -6,15 +6,13 @@
   NODE_VERSION = "18"
   NPM_VERSION = "9"
 
-
 # Netlify Functions
 [functions]
   directory = "netlify/functions"
 
-# Form notifications
-[plugins]
-  [[plugins.package]]
-    package = "@netlify/plugin-form-submissions"
+# Plugin for form submissions
+[[plugins]]
+  package = "@netlify/plugin-form-submissions"
 
 # Essential plugin for Next.js on Netlify
 [[plugins]]
@@ -33,5 +31,4 @@
   status = 301
   force = true
 
-# Next.js static files
 
