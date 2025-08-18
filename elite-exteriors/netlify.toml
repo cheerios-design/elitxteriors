@@ -3,16 +3,12 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_VERSION = "9"
+  NODE_VERSION = "20"
+  NPM_VERSION = "10"
 
 # Netlify Functions
 [functions]
   directory = "netlify/functions"
-
-# Plugin for form submissions
-[[plugins]]
-  package = "@netlify/plugin-form-submissions"
 
 # Essential plugin for Next.js on Netlify
 [[plugins]]
