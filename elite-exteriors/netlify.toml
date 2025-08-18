@@ -1,10 +1,20 @@
 [build]
   command = "npm run build"
   publish = ".next"
-  
+
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
+
+
+# Netlify Functions
+[functions]
+  directory = "netlify/functions"
+
+# Form notifications
+[plugins]
+  [[plugins.package]]
+    package = "@netlify/plugin-form-submissions"
 
 # Essential plugin for Next.js on Netlify
 [[plugins]]
@@ -24,29 +34,21 @@
   force = true
 
 # Next.js static files
+=======
+# Essential plugin for Next.js on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Force apex domain redirect to www
 [[redirects]]
-  from = "/_next/static/*"
-  to = "/_next/static/:splat"
-  status = 200
+  from = "https://elitexteriorsva.com/*"
+  to = "https://www.elitexteriorsva.com/:splat"
+  status = 301
+  force = true
 
-# Security headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+[[redirects]]
+  from = "http://elitexteriorsva.com/*"
+  to = "https://www.elitexteriorsva.com/:splat"
+  status = 301
+  force = true
 
-# Cache static assets
-[[headers]]
-  for = "/_next/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache images
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000"
