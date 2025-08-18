@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,8 +12,8 @@ if (typeof window !== "undefined") {
 
 const beforeAfterImages = [
   {
-    before: "/assets/images/before1.jpg",
-    after: "/assets/images/after1.jpg",
+    before: "/assets/images/gallery/before1.jpg",
+    after: "/assets/images/gallery/after1.jpg",
     title: "Pressure Washing",
     description: "Complete transformation of moss-stained wooden deck",
   },
@@ -20,14 +21,20 @@ const beforeAfterImages = [
 ];
 
 const galleryImages = [
-  { src: "/assets/images/gallery1(1).JPG", title: "Professionals at Work" },
-  { src: "/assets/images/gallery1(2).JPG", title: "Planning Before Work" },
-  { src: "/assets/images/gallery1(3).JPG", title: "Exterior Cleaning" },
-  { src: "/assets/images/gallery1(4).jpg", title: "Driveway Cleaning" },
-  { src: "/assets/images/gallery1(5).jpg", title: "Exterior Cleaning" },
-  { src: "/assets/images/gallery1(6).jpg", title: "Patio Restoration" },
-  { src: "/assets/images/gallery1(7).jpg", title: "Exterior Cleaning" },
-  { src: "/assets/images/gallery1(8).JPG", title: "Pressure Washing" },
+  {
+    src: "/assets/images/gallery/gallery1(1).JPG",
+    title: "Professionals at Work",
+  },
+  {
+    src: "/assets/images/gallery/gallery1(2).JPG",
+    title: "Planning Before Work",
+  },
+  { src: "/assets/images/gallery/gallery1(3).JPG", title: "Exterior Cleaning" },
+  { src: "/assets/images/gallery/gallery1(4).jpg", title: "Driveway Cleaning" },
+  { src: "/assets/images/gallery/gallery1(5).jpg", title: "Exterior Cleaning" },
+  { src: "/assets/images/gallery/gallery1(6).jpg", title: "Patio Restoration" },
+  { src: "/assets/images/gallery/gallery1(7).jpg", title: "Exterior Cleaning" },
+  { src: "/assets/images/gallery/gallery1(8).JPG", title: "Pressure Washing" },
 ];
 
 export function BeforeAfterSection() {
@@ -303,9 +310,12 @@ export function BeforeAfterSection() {
             <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Get Free Quote
             </button>
-            <button className="border border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Gallery
-            </button>
+            <Link
+              href="/gallery"
+              className="border border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-3 rounded-lg font-semibold transition-colors inline-block text-center"
+            >
+              View Full Gallery
+            </Link>
           </div>
         </div>
       </div>

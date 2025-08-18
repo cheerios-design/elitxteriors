@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title:
     "About Us - Elite Exteriors - Professional Pressure Washing & Exterior Services in Hampton Roads, VA",
   description:
-    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Matt & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
+    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, Christmas light installation, and lawn care & mulching services in Hampton Roads, Virginia. Founded by Matt & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
 };
 
 const teamMembers = [
@@ -61,7 +61,7 @@ const values = [
   {
     title: "Quality Service",
     description:
-      "Professional pressure washing, gutter cleaning, Christmas light installation, and lawn care services using proven techniques and equipment.",
+      "Professional pressure washing, gutter cleaning, Christmas light installation, and lawn care & mulching services using proven techniques and equipment.",
     icon: (
       <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
         <svg
@@ -112,10 +112,10 @@ export default function AboutPage() {
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
                 Elite Exteriors is a trusted family-run business founded by Matt
                 & Gaby, dedicated to providing top-notch pressure washing,
-                gutter cleaning, Christmas light installation, and lawn care
-                services in Hampton Roads, Virginia. We proudly serve Virginia
-                Beach, Chesapeake, Norfolk, Suffolk, Newport News, Hampton, and
-                Williamsburg.
+                gutter cleaning, Christmas light installation, and lawn care &
+                mulching services in Hampton Roads, Virginia. We proudly serve
+                Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News,
+                Hampton, and Williamsburg.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
@@ -159,10 +159,10 @@ export default function AboutPage() {
               </p>
               <p className="mb-6">
                 We specialize in providing top-notch pressure washing, gutter
-                cleaning, Christmas light installation, and lawn care services
-                with a personal touch that only a family business can provide.
-                Our service area includes Virginia Beach, Chesapeake, Norfolk,
-                Suffolk, Newport News, Hampton, and Williamsburg.
+                cleaning, Christmas light installation, and lawn care & mulching
+                services with a personal touch that only a family business can
+                provide. Our service area includes Virginia Beach, Chesapeake,
+                Norfolk, Suffolk, Newport News, Hampton, and Williamsburg.
               </p>
               <p className="mb-6">
                 What started as a small local family business has grown into a
@@ -257,7 +257,7 @@ export default function AboutPage() {
             Join families throughout Virginia Beach, Chesapeake, Norfolk,
             Suffolk, Newport News, Hampton, and Williamsburg who trust Elite
             Exteriors for their pressure washing, gutter cleaning, Christmas
-            light installation, and lawn care needs.
+            light installation, and lawn care & mulching needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

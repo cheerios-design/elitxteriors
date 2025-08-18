@@ -91,7 +91,7 @@ const residentialServices = [
   {
     title: "Yard Work & Seasonal Cleanup",
     description:
-      "Comprehensive outdoor maintenance including landscaping and seasonal property cleanup.",
+      "Comprehensive outdoor maintenance including mulching and seasonal property cleanup.",
     icon: "🌿",
   },
 ];

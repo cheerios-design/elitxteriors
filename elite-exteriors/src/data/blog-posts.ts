@@ -475,8 +475,8 @@ export const blogPosts: BlogPost[] = [
 <h3 class="text-primary-700 font-medium text-xl mt-6 mb-2">Prevent Water Damage</h3>
 <p class="text-primary-900 mb-4 leading-relaxed">You'll prevent water damage to your home's foundation—something every homeowner wants to avoid!</p>
 
-<h3 class="text-primary-700 font-medium text-xl mt-6 mb-2">Protect Your Landscaping</h3>
-<p class="text-primary-900 mb-4 leading-relaxed">Prevent erosion and protect your landscaping from water overflow.</p>
+<h3 class="text-primary-700 font-medium text-xl mt-6 mb-2">Protect Your Garden & Mulched Areas</h3>
+<p class="text-primary-900 mb-4 leading-relaxed">Prevent erosion and protect your garden and mulched areas from water overflow.</p>
 
 <h3 class="text-primary-700 font-medium text-xl mt-6 mb-2">Reduce Pest Risk</h3>
 <p class="text-primary-900 mb-4 leading-relaxed">Clean gutters reduce the risk of pesky critters moving in and making themselves at home.</p>

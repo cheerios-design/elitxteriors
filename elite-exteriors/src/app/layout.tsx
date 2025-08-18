@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     template: "%s | Elite Exteriors",
   },
   description:
-    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, handyman services, Christmas light installation, and lawn care services in Hampton Roads, Virginia. Founded by Matt & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
+    "Elite Exteriors is a trusted family-run business providing top-notch pressure washing, gutter cleaning, handyman services, Christmas light installation, and lawn care & mulching services in Hampton Roads, Virginia. Founded by Matt & Gaby, serving Virginia Beach, Chesapeake, Norfolk, Suffolk, Newport News, and Williamsburg.",
   keywords: [
     "pressure washing",
     "gutter cleaning",
     "handyman services",
     "Christmas lights",
-    "lawn care",
+    "lawn care & mulching",
     "exterior cleaning",
     "Hampton Roads",
     "Virginia Beach",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title:
       "Elite Exteriors - Professional Pressure Washing Services in Hampton Roads",
     description:
-      "Family-run business providing exceptional pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Virginia. Founded by Matt & Gaby, serving Hampton Roads area.",
+      "Family-run business providing exceptional pressure washing, gutter cleaning, Christmas light installation, and lawn care & mulching services in Virginia. Founded by Matt & Gaby, serving Hampton Roads area.",
     images: [
       {
         url: "https://elitexteriorsva.com/images/elite-exteriors-og-image.jpg",
@@ -169,7 +169,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Elite Exteriors",
               description:
-                "Professional pressure washing, gutter cleaning, Christmas light installation, and lawn care services in Hampton Roads, Virginia",
+                "Professional pressure washing, gutter cleaning, Christmas light installation, and lawn care & mulching services in Hampton Roads, Virginia",
               url: "https://elitexteriorsva.com",
               telephone: "+1-757-796-7240",
               email: "info@elitexteriorsva.com",
@@ -268,9 +268,9 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Lawn Care",
+                      name: "Lawn Care & Mulching",
                       description:
-                        "Professional lawn care and maintenance services",
+                        "Professional lawn care and mulching services",
                     },
                   },
                 ],
