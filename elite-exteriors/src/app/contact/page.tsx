@@ -39,6 +39,7 @@ const services = [
   "Pressure Washing",
   "Gutter Cleaning",
   "Christmas Light Installation",
+  "Handyman Services",
   "Lawn Care & Mulching",
   "Deck & Patio Cleaning",
   "Driveway Cleaning",
@@ -65,19 +66,40 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus("success");
-      setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        propertyType: "",
-        message: "",
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const formData = new FormData(formElement);
+      const body = new URLSearchParams();
+
+      formData.forEach((value, key) => {
+        body.append(key, value.toString());
       });
-    }, 1000);
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          propertyType: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (
@@ -200,10 +222,27 @@ export default function ContactPage() {
                   </div>
                 )}
 
+                {submitStatus === "error" && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-800">
+                      Sorry, there was an error submitting your message. Please
+                      try again or call us directly.
+                    </p>
+                  </div>
+                )}
+
                 <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
                   className="space-y-6 text-sky-600"
                 >
+                  {/* Hidden fields for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input name="bot-field" style={{ display: "none" }} />
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>

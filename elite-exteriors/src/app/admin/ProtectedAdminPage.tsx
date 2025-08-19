@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AdminAuth } from "@/components/admin/AdminAuth";
 import { AdminLayout } from "@/components/admin/AdminLayout";
-import { AdminDashboard } from "./AdminDashboard";
+import AdminDashboard from "./AdminDashboard";
 
 export function ProtectedAdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
