@@ -6,19 +6,6 @@ export interface BlogLike {
   userEmail?: string;
 }
 
-export interface BlogComment {
-  id: string;
-  postSlug: string;
-  userName: string;
-  userEmail: string;
-  content: string;
-  createdAt: string;
-  approved: boolean;
-  moderatedAt?: string;
-  moderatedBy?: string;
-  parentId?: string; // For replies (future feature)
-}
-
 export interface BlogShare {
   id: string;
   postSlug: string;
@@ -36,11 +23,8 @@ export interface BlogStats {
 }
 
 export interface NotificationPayload {
-  type: "like" | "comment" | "share";
+  type: "like" | "share";
   postSlug: string;
   postTitle: string;
-  userName?: string;
-  userEmail?: string;
-  content?: string;
   timestamp: string;
 }
