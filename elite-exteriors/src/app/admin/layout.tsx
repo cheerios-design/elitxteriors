@@ -19,7 +19,10 @@ export default function AdminRootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/tok5xha.css" />
+      </head>
+      <body className="font-sans antialiased">
         {children}
         <Toaster
           position="top-right"
