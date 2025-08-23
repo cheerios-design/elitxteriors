@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import "../../styles/admin-dashboard.css";
 import {
   MessageCircle,
   Heart,
@@ -38,6 +39,13 @@ interface Comment {
   content: string;
   createdAt: string;
   approved: boolean;
+}
+
+interface SubmissionPayload {
+  id: string;
+  created_at?: string;
+  data?: Record<string, string>;
+  labels?: string[];
 }
 
 export default function AdminDashboard() {
@@ -154,18 +162,47 @@ export default function AdminDashboard() {
 
   const loadPendingComments = async (): Promise<Comment[]> => {
     try {
-      // Try to get comments from localStorage (for development testing)
-      const storedComments = localStorage.getItem("blog_pending_comments");
-      if (storedComments) {
-        return JSON.parse(storedComments);
-      }
-
-      // In production, this would fetch from Netlify Forms API
-      // For now, return empty array but with proper instructions
-      console.log(
-        "No pending comments found in localStorage. Check Netlify Forms dashboard for real submissions."
+      // Fetch real submissions via Netlify Function
+      const res = await fetch(
+        "/.netlify/functions/list-submissions?form=" +
+          encodeURIComponent("blog-comments"),
+        { cache: "no-store" }
       );
-      return [];
+
+      if (!res.ok) {
+        const text = await res.text();
+        console.warn("Failed to load submissions:", text);
+        return [];
+      }
+      const payload = (await res.json()) as {
+        submissions?: SubmissionPayload[];
+      };
+      const submissions: SubmissionPayload[] = payload.submissions || [];
+
+      const mapped: Comment[] = submissions
+        .map((s) => {
+          const data = s.data || {};
+          const labels: string[] = Array.isArray(s.labels) ? s.labels : [];
+          return {
+            id: s.id,
+            postSlug: data.postSlug || "",
+            postTitle: data.postTitle || data.postSlug || "Unknown Post",
+            userName: data.userName || "Anonymous",
+            userEmail: data.userEmail || "",
+            content: data.content || data.message || "",
+            createdAt:
+              data.timestamp || s.created_at || new Date().toISOString(),
+            approved: labels.includes("approved"),
+          } as Comment;
+        })
+        // Show only unapproved as pending
+        .filter((c) => !c.approved)
+        // Newest first
+        .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+
+      // Update stats.pendingComments to reflect real count
+      setStats((prev) => ({ ...prev, pendingComments: mapped.length }));
+      return mapped;
     } catch (error) {
       console.error("Error loading pending comments:", error);
       return [];
@@ -173,36 +210,60 @@ export default function AdminDashboard() {
   };
 
   const handleApproveComment = async (commentId: string) => {
-    try {
-      // In a real implementation, this would call the Netlify Function
-      setPendingComments((prev) => prev.filter((c) => c.id !== commentId));
-      setStats((prev) => ({
-        ...prev,
-        pendingComments: prev.pendingComments - 1,
-      }));
+    // Optimistic update
+    const previous = pendingComments;
+    setPendingComments((prev) => prev.filter((c) => c.id !== commentId));
+    setStats((prev) => ({
+      ...prev,
+      pendingComments: Math.max(0, prev.pendingComments - 1),
+    }));
 
-      // Show success message
-      alert("Comment approved successfully!");
+    try {
+      const res = await fetch("/.netlify/functions/approve-submission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: commentId }),
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text);
+      }
+      toast.success("Comment approved");
     } catch (error) {
       console.error("Error approving comment:", error);
-      alert("Error approving comment. Please try again.");
+      // Rollback
+      setPendingComments(previous);
+      setStats((prev) => ({ ...prev, pendingComments: previous.length }));
+      toast.error("Failed to approve. Check Netlify env vars.");
     }
   };
 
   const handleRejectComment = async (commentId: string) => {
-    try {
-      // In a real implementation, this would call the Netlify Function
-      setPendingComments((prev) => prev.filter((c) => c.id !== commentId));
-      setStats((prev) => ({
-        ...prev,
-        pendingComments: prev.pendingComments - 1,
-      }));
+    // Optimistic update
+    const previous = pendingComments;
+    setPendingComments((prev) => prev.filter((c) => c.id !== commentId));
+    setStats((prev) => ({
+      ...prev,
+      pendingComments: Math.max(0, prev.pendingComments - 1),
+    }));
 
-      // Show success message
-      alert("Comment rejected successfully!");
+    try {
+      const res = await fetch("/.netlify/functions/reject-submission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: commentId }),
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text);
+      }
+      toast.success("Comment rejected");
     } catch (error) {
       console.error("Error rejecting comment:", error);
-      alert("Error rejecting comment. Please try again.");
+      // Rollback
+      setPendingComments(previous);
+      setStats((prev) => ({ ...prev, pendingComments: previous.length }));
+      toast.error("Failed to reject. Check Netlify env vars.");
     }
   };
 
@@ -239,9 +300,9 @@ export default function AdminDashboard() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Total Likes */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 admin-card-hover admin-slide-up admin-delay-100">
           <div className="flex items-center justify-between mb-4">
-            <div className="bg-red-50 p-3 rounded-xl">
+            <div className="bg-red-50 p-3 rounded-xl admin-pulse-glow">
               <Heart className="h-6 w-6 text-red-500" />
             </div>
             <span className="text-sm font-medium text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
@@ -262,9 +323,9 @@ export default function AdminDashboard() {
         </div>
 
         {/* Total Comments */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 admin-card-hover admin-slide-up admin-delay-200">
           <div className="flex items-center justify-between mb-4">
-            <div className="bg-blue-50 p-3 rounded-xl">
+            <div className="bg-blue-50 p-3 rounded-xl admin-pulse-glow">
               <MessageCircle className="h-6 w-6 text-blue-500" />
             </div>
             <span className="text-sm font-medium text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
@@ -285,9 +346,9 @@ export default function AdminDashboard() {
         </div>
 
         {/* Total Shares */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 admin-card-hover admin-slide-up admin-delay-300">
           <div className="flex items-center justify-between mb-4">
-            <div className="bg-green-50 p-3 rounded-xl">
+            <div className="bg-green-50 p-3 rounded-xl admin-pulse-glow">
               <Share2 className="h-6 w-6 text-green-500" />
             </div>
             <span className="text-sm font-medium text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
