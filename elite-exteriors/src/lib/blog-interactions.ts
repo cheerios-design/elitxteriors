@@ -1,6 +1,5 @@
 import type {
   BlogLike,
-  BlogComment,
   BlogShare,
   BlogStats,
   NotificationPayload,
@@ -182,55 +181,6 @@ export async function unlikeBlogPost(
   } catch (error) {
     console.warn("Failed to submit unlike to backend:", error);
   }
-}
-
-// Comment Functions
-export async function submitComment(
-  postSlug: string,
-  postTitle: string,
-  userName: string,
-  userEmail: string,
-  content: string
-): Promise<BlogComment> {
-  const comment: BlogComment = {
-    id: `comment_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    postSlug,
-    userName,
-    userEmail,
-    content,
-    createdAt: new Date().toISOString(),
-    approved: false,
-  };
-
-  // Update local stats
-  updateLocalStats(postSlug, {
-    comments: getLocalStats(postSlug).comments + 1,
-  });
-
-  // Submit to Netlify Forms
-  try {
-    await submitToNetlify("blog-comments", {
-      ...comment,
-      postTitle,
-      timestamp: comment.createdAt,
-    });
-
-    // Send notification
-    await sendNotification({
-      type: "comment",
-      postSlug,
-      postTitle,
-      userName,
-      userEmail,
-      content,
-      timestamp: comment.createdAt,
-    });
-  } catch (error) {
-    console.error("Failed to submit comment:", error);
-    throw new Error("Failed to submit comment. Please try again.");
-  }
-
-  return comment;
 }
 
 // Share Functions

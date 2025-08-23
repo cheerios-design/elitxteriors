@@ -18,7 +18,6 @@ interface BlogInteractionsProps {
   initialLikes?: number;
   initialComments?: number;
   initialShares?: number;
-  onCommentClick?: () => void;
   onShareClick?: () => void;
 }
 
@@ -28,7 +27,6 @@ export function BlogInteractions({
   initialLikes = 0,
   initialComments = 0,
   initialShares = 0,
-  onCommentClick,
   onShareClick,
 }: BlogInteractionsProps) {
   const [stats, setStats] = useState<BlogStats>({
@@ -89,10 +87,6 @@ export function BlogInteractions({
     }
   };
 
-  const handleComment = () => {
-    onCommentClick?.();
-  };
-
   const handleShare = () => {
     onShareClick?.();
   };
@@ -142,17 +136,14 @@ export function BlogInteractions({
           </span>
         </button>
 
-        {/* Comment Button */}
-        <button
-          onClick={handleComment}
-          className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-200 cursor-pointer"
-        >
+        {/* Comment Display (Read-only) */}
+        <div className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-600">
           <MessageCircle className="h-5 w-5" />
           <span className="font-medium">{stats.comments}</span>
           <span className="hidden sm:inline text-sm">
             {stats.comments === 1 ? "Comment" : "Comments"}
           </span>
-        </button>
+        </div>
 
         {/* Share Button */}
         <button

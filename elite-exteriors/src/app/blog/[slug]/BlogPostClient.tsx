@@ -7,7 +7,6 @@ import { Toaster } from "react-hot-toast";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { NewsletterSignup } from "@/components/blog/NewsletterSignup";
 import { BlogInteractions } from "@/components/blog/BlogInteractions";
-import { BlogCommentForm } from "@/components/blog/BlogCommentForm";
 import { BlogShare } from "@/components/blog/BlogShare";
 import AnimatedSection from "@/components/ui/animated-section";
 import { Calendar, Clock, Eye, User, ArrowLeft, Share2 } from "lucide-react";
@@ -21,7 +20,6 @@ interface BlogPostClientProps {
 
 export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   const [showShareModal, setShowShareModal] = useState(false);
-  const [showCommentForm, setShowCommentForm] = useState(false);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -257,23 +255,11 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                     initialLikes={post.likes}
                     initialComments={post.comments.length}
                     initialShares={0}
-                    onCommentClick={() => setShowCommentForm(true)}
                     onShareClick={() => setShowShareModal(true)}
                   />
                 </div>
               </article>
             </AnimatedSection>
-
-            {/* Comment Form */}
-            {showCommentForm && (
-              <AnimatedSection>
-                <BlogCommentForm
-                  postSlug={post.slug}
-                  postTitle={post.title}
-                  onCommentSubmitted={() => setShowCommentForm(false)}
-                />
-              </AnimatedSection>
-            )}
 
             {/* Newsletter Signup */}
             <AnimatedSection>
