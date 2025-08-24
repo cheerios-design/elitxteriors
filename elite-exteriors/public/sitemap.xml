@@ -1,33 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://eliteexteriors.com</loc>
-    <lastmod>2025-07-23</lastmod>
+    <loc>https://www.elitexteriorsva.com</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.elitexteriorsva.com/assets/images/elite-exteriors-hero.jpg</image:loc>
+      <image:title>Elite Exteriors - Professional Pressure Washing Hampton Roads VA</image:title>
+    </image:image>
   </url>
+
+  <!-- About Page -->
   <url>
-    <loc>https://eliteexteriors.com/about</loc>
-    <lastmod>2025-07-23</lastmod>
+    <loc>https://www.elitexteriorsva.com/about</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.elitexteriorsva.com/assets/images/about-us.jpg</image:loc>
+      <image:title>Matt and Gaby - Elite Exteriors Founders</image:title>
+    </image:image>
   </url>
+
+  <!-- Services Page -->
   <url>
-    <loc>https://eliteexteriors.com/services</loc>
-    <lastmod>2025-07-23</lastmod>
+    <loc>https://www.elitexteriorsva.com/services</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Handyman Services -->
   <url>
-    <loc>https://eliteexteriors.com/handyman</loc>
-    <lastmod>2025-07-28</lastmod>
+    <loc>https://www.elitexteriorsva.com/handyman</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Contact Page -->
   <url>
-    <loc>https://eliteexteriors.com/contact</loc>
-    <lastmod>2025-07-23</lastmod>
+    <loc>https://www.elitexteriorsva.com/contact</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://www.elitexteriorsva.com/gallery</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog/best-time-of-year-for-pressure-washing-in-hampton-roads</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog/driveway-cleaning-101-removing-oil-stains-mold-and-dirt</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog/how-chesapeake-humidity-affects-your-home-exterior-and-cleaning-solutions</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog/commercial-pressure-washing-maintaining-your-business-curb-appeal</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog/gutter-cleaning-preventing-water-damage-in-hampton-roads</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.elitexteriorsva.com/blog/pressure-washing-vs-soft-washing-choosing-the-right-method</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
