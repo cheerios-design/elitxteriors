@@ -69,13 +69,16 @@ export default function ContactPage() {
     try {
       const formElement = e.target as HTMLFormElement;
       const formData = new FormData(formElement);
-      const body = new URLSearchParams();
 
+      // Ensure form-name is included
+      formData.append("form-name", "contact");
+
+      const body = new URLSearchParams();
       formData.forEach((value, key) => {
         body.append(key, value.toString());
       });
 
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body.toString(),
@@ -241,6 +244,12 @@ export default function ContactPage() {
                 >
                   {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Contact Form Submission - Elite Exteriors"
+                    data-remove-prefix
+                  />
                   <input name="bot-field" style={{ display: "none" }} />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
