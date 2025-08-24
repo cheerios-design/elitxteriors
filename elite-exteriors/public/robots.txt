@@ -2,18 +2,22 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://eliteexteriors.com/sitemap.xml
+Sitemap: https://www.elitexteriorsva.com/sitemap.xml
 
 # Disallow admin areas (if any in the future)
 Disallow: /admin/
 Disallow: /api/
+Disallow: /_next/
+Disallow: /netlify/
 
 # Allow important pages
 Allow: /
 Allow: /about
 Allow: /services
+Allow: /handyman
 Allow: /contact
 Allow: /blog
+Allow: /gallery
 
 # Cache policy
 Crawl-delay: 1
