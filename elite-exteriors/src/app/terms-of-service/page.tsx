@@ -21,10 +21,10 @@ export default function TermsOfServicePage() {
           </p>
 
           <p className="mb-6">
-            Welcome to Elite Exteriors. These Terms of Service ("Terms") govern
-            your use of our website and services. By accessing our website or
-            using our pressure washing services, you agree to be bound by these
-            Terms.
+            Welcome to Elite Exteriors. These Terms of Service {`("Terms")`}{" "}
+            govern your use of our website and services. By accessing our
+            website or using our pressure washing services, you agree to be
+            bound by these Terms.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">

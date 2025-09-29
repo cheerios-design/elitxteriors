@@ -19,9 +19,11 @@ export default function CookiePolicyPage() {
           </p>
 
           <p className="mb-6">
-            This Cookie Policy explains how Elite Exteriors ("we," "us," or
-            "our") uses cookies and similar tracking technologies on our
-            website. This policy should be read alongside our{" "}
+            This Cookie Policy explains how Elite Exteriors{" "}
+            {`("we," "us," or
+            "our")`}{" "}
+            uses cookies and similar tracking technologies on our website. This
+            policy should be read alongside our{" "}
             <a href="/privacy-policy" className="text-blue-600 hover:underline">
               Privacy Policy
             </a>
@@ -64,7 +66,7 @@ export default function CookiePolicyPage() {
           <p className="mb-4">
             These cookies help us understand how visitors interact with our
             website by collecting and reporting information anonymously. This
-            helps us improve our website's performance and user experience.
+            helps us improve our website&apos;s performance and user experience.
           </p>
           <ul className="list-disc pl-6 mb-6">
             <li>Website traffic analysis</li>
@@ -213,7 +215,8 @@ export default function CookiePolicyPage() {
           <p className="mb-6">
             We may update this Cookie Policy from time to time to reflect
             changes in technology, law, or our business practices. We will post
-            any updates on this page with a revised "Last Updated" date.
+            any updates on this page with a revised &quot;Last Updated&quot;
+            date.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
