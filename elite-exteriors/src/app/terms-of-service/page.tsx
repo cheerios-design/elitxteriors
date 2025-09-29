@@ -12,7 +12,7 @@ export default function TermsOfServicePage() {
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white">
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4 mt-20 flex items-center min-h-[40vh]">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Terms of Service
@@ -258,10 +258,10 @@ export default function TermsOfServicePage() {
                 <p className="text-neutral-900">
                   📧 Email:{" "}
                   <a
-                    href="mailto:info@elitxteriors.com"
+                    href="mailto:info@elitexteriorsva.com"
                     className="text-primary-600 hover:text-primary-800 underline font-semibold"
                   >
-                    info@elitxteriors.com
+                    info@elitexteriorsva.com
                   </a>
                 </p>
                 <p className="text-neutral-900">
