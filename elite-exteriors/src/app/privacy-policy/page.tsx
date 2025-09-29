@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <p className="text-neutral-700 text-lg leading-relaxed mb-8">
+            <p className="text-neutral-900 text-lg leading-relaxed mb-8">
               At Elite Exteriors, we are committed to protecting your privacy
               and ensuring the security of your personal information. This
               Privacy Policy outlines how we collect, use, and safeguard the
@@ -49,28 +49,28 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Information We Collect
             </h2>
-            <p className="text-neutral-700 mb-6">
+            <p className="text-neutral-900 mb-6">
               We may collect the following types of information:
             </p>
             <div className="bg-neutral-50 rounded-xl p-6 mb-8">
               <ul className="space-y-3">
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Name
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Email address
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Phone number
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Address
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Service preferences
                 </li>
@@ -80,24 +80,24 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               How We Use Your Information
             </h2>
-            <p className="text-neutral-700 mb-6">
+            <p className="text-neutral-900 mb-6">
               We use the information we collect to:
             </p>
             <div className="bg-neutral-50 rounded-xl p-6 mb-8">
               <ul className="space-y-3">
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Provide and improve our pressure washing services
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Communicate with you about service requests
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Send updates or promotional offers (with your consent)
                 </li>
-                <li className="flex items-center text-neutral-700">
+                <li className="flex items-center text-neutral-900">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
                   Enhance our website and customer experience
                 </li>
@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
               Protection of Phone Numbers and Consent
             </h2>
             <div className="bg-green-50 rounded-xl p-6 mb-8 border border-green-200">
-              <p className="text-neutral-700 leading-relaxed">
+              <p className="text-neutral-900 leading-relaxed">
                 We assure you that the phone numbers and consent you provide
                 will never be shared with third-party marketers. This
                 information is solely for internal use to deliver our services
@@ -119,7 +119,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Data Security
             </h2>
-            <p className="text-neutral-700 leading-relaxed mb-8">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               We implement appropriate technical and organizational measures to
               protect your personal information from unauthorized access,
               disclosure, alteration, or destruction.
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Data Usage
             </h2>
-            <p className="text-neutral-700 leading-relaxed mb-8">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               We collect your phone number for service-related communication,
               such as quotes, appointment reminders, and updates.
             </p>
@@ -137,7 +137,7 @@ export default function PrivacyPolicyPage() {
               Opt-Out
             </h2>
             <div className="bg-yellow-50 rounded-xl p-6 mb-8 border border-yellow-200">
-              <p className="text-neutral-700 leading-relaxed">
+              <p className="text-neutral-900 leading-relaxed">
                 You can opt-out of receiving SMS updates at any time by replying
                 <span className="bg-yellow-200 px-2 py-1 rounded font-semibold mx-1">
                   STOP
@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Cookies and Tracking Technologies
             </h2>
-            <p className="text-neutral-700 leading-relaxed mb-4">
+            <p className="text-neutral-900 leading-relaxed mb-4">
               Our website may use cookies and similar tracking technologies to
               enhance your browsing experience. You can adjust your browser
               settings to refuse cookies if you prefer.
@@ -170,7 +170,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Third-Party Links
             </h2>
-            <p className="text-neutral-700 leading-relaxed mb-8">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               Our website may contain links to third-party websites. We are not
               responsible for the privacy practices or content of these external
               sites. Your phone number and personal data will not be sold or
@@ -180,7 +180,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Children&apos;s Privacy
             </h2>
-            <p className="text-neutral-700 leading-relaxed mb-8">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               Our services are not intended for children under 13 years of age.
               We do not knowingly collect personal information from children
               under 13.
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Changes to This Policy
             </h2>
-            <p className="text-neutral-700 leading-relaxed mb-8">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               We may update this Privacy Policy from time to time. We will
               notify you of any significant changes by posting the new policy on
               our website. You can view this policy at any time by visiting this
@@ -200,12 +200,12 @@ export default function PrivacyPolicyPage() {
               Contact Us
             </h2>
             <div className="bg-neutral-50 rounded-xl p-6 mb-8 border border-neutral-200">
-              <p className="text-neutral-700 leading-relaxed mb-4">
+              <p className="text-neutral-900 leading-relaxed mb-4">
                 If you have any questions or concerns about our Privacy Policy,
                 please contact us:
               </p>
               <div className="space-y-2">
-                <p className="text-neutral-700">
+                <p className="text-neutral-900">
                   📧 Email:{" "}
                   <a
                     href="mailto:info@elitxteriors.com"
@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
                     info@elitxteriors.com
                   </a>
                 </p>
-                <p className="text-neutral-700">
+                <p className="text-neutral-900">
                   📞 Phone:{" "}
                   <a
                     href="tel:757-796-7240"

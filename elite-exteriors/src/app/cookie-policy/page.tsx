@@ -39,7 +39,7 @@ export default function CookiePolicyPage() {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <p className="mb-6">
+            <p className="text-neutral-900 text-lg leading-relaxed mb-8">
               This Cookie Policy explains how Elite Exteriors{" "}
               {`("we," "us," or
             "our")`}{" "}
@@ -47,236 +47,343 @@ export default function CookiePolicyPage() {
               This policy should be read alongside our{" "}
               <a
                 href="/privacy-policy"
-                className="text-blue-600 hover:underline"
+                className="text-primary-600 hover:text-primary-800 underline font-semibold"
               >
                 Privacy Policy
               </a>
               .
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               What Are Cookies?
             </h2>
-            <p className="mb-6">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               Cookies are small text files that are stored on your device when
               you visit our website. They help us provide you with a better
               browsing experience by remembering your preferences and improving
               website functionality.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Types of Cookies We Use
             </h2>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
               Essential Cookies
             </h3>
-            <p className="mb-4">
+            <p className="text-neutral-900 leading-relaxed mb-4">
               These cookies are necessary for our website to function properly.
               They enable basic features like page navigation, form submissions,
               and secure areas access. The website cannot function properly
               without these cookies.
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>Session management</li>
-              <li>Security features</li>
-              <li>Form functionality</li>
-              <li>Basic website operations</li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Session management
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Security features
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Form functionality
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Basic website operations
+                </li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
               Performance and Analytics Cookies
             </h3>
-            <p className="mb-4">
+            <p className="text-neutral-900 leading-relaxed mb-4">
               These cookies help us understand how visitors interact with our
               website by collecting and reporting information anonymously. This
               helps us improve our website&apos;s performance and user
               experience.
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>Website traffic analysis</li>
-              <li>Page performance monitoring</li>
-              <li>User behavior insights</li>
-              <li>Error tracking and debugging</li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Website traffic analysis
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Page performance monitoring
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  User behavior insights
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Error tracking and debugging
+                </li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
               Functional Cookies
             </h3>
-            <p className="mb-4">
+            <p className="text-neutral-900 leading-relaxed mb-4">
               These cookies allow our website to remember choices you make and
               provide enhanced, more personalized features.
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>Language preferences</li>
-              <li>Region selection</li>
-              <li>User interface customizations</li>
-              <li>Accessibility features</li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Language preferences
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Region selection
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  User interface customizations
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Accessibility features
+                </li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
               Marketing and Advertising Cookies
             </h3>
-            <p className="mb-4">
+            <p className="text-neutral-900 leading-relaxed mb-4">
               These cookies may be used to track visitors across websites to
               display relevant advertisements and measure the effectiveness of
               advertising campaigns.
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>Targeted advertising</li>
-              <li>Social media integration</li>
-              <li>Marketing campaign tracking</li>
-              <li>Conversion measurement</li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Targeted advertising
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Social media integration
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Marketing campaign tracking
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Conversion measurement
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Third-Party Cookies
             </h2>
-            <p className="mb-6">
+            <p className="text-neutral-900 leading-relaxed mb-6">
               Our website may use third-party services that place their own
               cookies on your device. These may include:
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>
-                <strong>Google Analytics:</strong> For website analytics and
-                performance tracking
-              </li>
-              <li>
-                <strong>Google Maps:</strong> For location services and
-                directions
-              </li>
-              <li>
-                <strong>Social Media Platforms:</strong> For social sharing and
-                integration features
-              </li>
-              <li>
-                <strong>Contact Forms:</strong> For form processing and spam
-                protection
-              </li>
-            </ul>
+            <div className="bg-blue-50 rounded-xl p-6 mb-8 border border-blue-200">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Google Analytics:</strong> For website analytics and
+                  performance tracking
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Google Maps:</strong> For location services and
+                  directions
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Social Media Platforms:</strong> For social sharing
+                  and integration features
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Contact Forms:</strong> For form processing and spam
+                  protection
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Managing Your Cookie Preferences
             </h2>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
               Browser Settings
             </h3>
-            <p className="mb-4">
+            <p className="text-neutral-900 leading-relaxed mb-6">
               You can control and manage cookies in various ways. Most web
               browsers allow you to:
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>View what cookies are stored on your device</li>
-              <li>Delete cookies individually or all at once</li>
-              <li>Block cookies from specific websites</li>
-              <li>Block all cookies from being set</li>
-              <li>Set preferences for accepting cookies</li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  View what cookies are stored on your device
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Delete cookies individually or all at once
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Block cookies from specific websites
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Block all cookies from being set
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  Set preferences for accepting cookies
+                </li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
               Browser-Specific Instructions
             </h3>
-            <ul className="list-disc pl-6 mb-6">
-              <li>
-                <strong>Chrome:</strong> Settings → Privacy and security →
-                Cookies and other site data
-              </li>
-              <li>
-                <strong>Firefox:</strong> Options → Privacy & Security → Cookies
-                and Site Data
-              </li>
-              <li>
-                <strong>Safari:</strong> Preferences → Privacy → Manage Website
-                Data
-              </li>
-              <li>
-                <strong>Edge:</strong> Settings → Cookies and site permissions →
-                Cookies and site data
-              </li>
-            </ul>
+            <div className="bg-yellow-50 rounded-xl p-6 mb-8 border border-yellow-200">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Chrome:</strong> Settings → Privacy and security →
+                  Cookies and other site data
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Firefox:</strong> Options → Privacy & Security →
+                  Cookies and Site Data
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Safari:</strong> Preferences → Privacy → Manage
+                  Website Data
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Edge:</strong> Settings → Cookies and site permissions
+                  → Cookies and site data
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Impact of Disabling Cookies
             </h2>
-            <p className="mb-6">
-              While you can browse our website with cookies disabled, please
-              note that some features and functionality may not work properly,
-              including:
-            </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>Contact form submissions</li>
-              <li>Quote request functionality</li>
-              <li>Personalized content</li>
-              <li>Website performance optimization</li>
-            </ul>
+            <div className="bg-red-50 rounded-xl p-6 mb-8 border border-red-200">
+              <p className="text-neutral-900 leading-relaxed mb-4">
+                While you can browse our website with cookies disabled, please
+                note that some features and functionality may not work properly,
+                including:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div>
+                  Contact form submissions
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div>
+                  Quote request functionality
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div>
+                  Personalized content
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div>
+                  Website performance optimization
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Cookie Retention
             </h2>
-            <p className="mb-6">
+            <p className="text-neutral-900 leading-relaxed mb-6">
               Different cookies have different retention periods:
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              <li>
-                <strong>Session cookies:</strong> Deleted when you close your
-                browser
-              </li>
-              <li>
-                <strong>Persistent cookies:</strong> Remain on your device for a
-                set period or until manually deleted
-              </li>
-              <li>
-                <strong>Essential cookies:</strong> Typically expire after your
-                browsing session
-              </li>
-              <li>
-                <strong>Analytics cookies:</strong> Usually expire after 1-2
-                years
-              </li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Session cookies:</strong> Deleted when you close your
+                  browser
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Persistent cookies:</strong> Remain on your device for
+                  a set period or until manually deleted
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Essential cookies:</strong> Typically expire after
+                  your browsing session
+                </li>
+                <li className="flex items-center text-neutral-900">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mr-4"></div>
+                  <strong>Analytics cookies:</strong> Usually expire after 1-2
+                  years
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Updates to This Cookie Policy
             </h2>
-            <p className="mb-6">
+            <p className="text-neutral-900 leading-relaxed mb-8">
               We may update this Cookie Policy from time to time to reflect
               changes in technology, law, or our business practices. We will
               post any updates on this page with a revised &quot;Last
               Updated&quot; date.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6 pb-3 border-b-2 border-primary-200">
               Contact Us
             </h2>
-            <p className="mb-6">
-              If you have any questions about our Cookie Policy or how we use
-              cookies, please contact us:
-            </p>
-            <ul className="list-none mb-6">
-              <li>
-                <strong>Email:</strong>{" "}
-                <a
-                  href="mailto:info@elitxteriors.com"
-                  className="text-blue-600 hover:underline"
-                >
-                  info@elitxteriors.com
-                </a>
-              </li>
-              <li>
-                <strong>Phone:</strong>{" "}
-                <a
-                  href="tel:757-796-7240"
-                  className="text-blue-600 hover:underline"
-                >
-                  757-796-7240
-                </a>
-              </li>
-              <li>
-                <strong>Address:</strong> 109G Gainsborough Square #711,
-                Chesapeake, VA 23320
-              </li>
-            </ul>
+            <div className="bg-neutral-50 rounded-xl p-6 mb-8 border border-neutral-200">
+              <p className="text-neutral-900 leading-relaxed mb-4">
+                If you have any questions about our Cookie Policy or how we use
+                cookies, please contact us:
+              </p>
+              <div className="space-y-2">
+                <p className="text-neutral-900">
+                  📧 Email:{" "}
+                  <a
+                    href="mailto:info@elitxteriors.com"
+                    className="text-primary-600 hover:text-primary-800 underline font-semibold"
+                  >
+                    info@elitxteriors.com
+                  </a>
+                </p>
+                <p className="text-neutral-900">
+                  📞 Phone:{" "}
+                  <a
+                    href="tel:757-796-7240"
+                    className="text-primary-600 hover:text-primary-800 underline font-semibold"
+                  >
+                    757-796-7240
+                  </a>
+                </p>
+                <p className="text-neutral-900">
+                  📍 Address: 109G Gainsborough Square #711, Chesapeake, VA
+                  23320
+                </p>
+              </div>
+            </div>
 
             <div className="bg-primary-50 rounded-xl p-6 mt-8 border border-primary-200">
               <p className="text-primary-800 text-lg font-semibold">
