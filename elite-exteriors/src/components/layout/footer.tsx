@@ -6,7 +6,6 @@ const footerLinks = {
   services: [
     { label: "Pressure Washing", href: "/services#pressure-washing" },
     { label: "Gutter Cleaning", href: "/services#gutter-cleaning" },
-    { label: "Handyman Services", href: "/handyman" },
     {
       label: "Christmas Light Installation",
       href: "/services#christmas-lights",

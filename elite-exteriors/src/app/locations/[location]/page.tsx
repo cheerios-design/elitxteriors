@@ -10,7 +10,7 @@ const locations = {
     name: "Virginia Beach",
     title: "Pressure Washing Virginia Beach VA | Elite Exteriors",
     description:
-      "Professional pressure washing services in Virginia Beach, VA. Elite Exteriors provides residential and commercial exterior cleaning, gutter cleaning, and handyman services. Free estimates!",
+      "Professional pressure washing services in Virginia Beach, VA. Elite Exteriors provides residential and commercial exterior cleaning and gutter cleaning. Free estimates!",
     population: "459,470",
     zipCodes: [
       "23450",
@@ -112,7 +112,7 @@ const locations = {
     name: "Suffolk",
     title: "Pressure Washing Suffolk VA | Elite Exteriors",
     description:
-      "Reliable pressure washing services in Suffolk, VA. Elite Exteriors offers professional exterior cleaning, gutter maintenance, and handyman services for Suffolk properties. Free estimates!",
+      "Reliable pressure washing services in Suffolk, VA. Elite Exteriors offers professional exterior cleaning and gutter maintenance for Suffolk properties. Free estimates!",
     population: "94,324",
     zipCodes: ["23434", "23435", "23436", "23437", "23438", "23439"],
     neighborhoods: [

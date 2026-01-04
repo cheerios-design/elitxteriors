@@ -1,0 +1,127 @@
+LOCAL SEO NEXT STEPS – ELITE EXTERIORS (Chesapeake, VA)
+Goal: Move into the local 3‑pack for “pressure washing chesapeake” and rank page 1 for core terms while increasing conversions.
+
+1) FOUNDATION AND DOMAIN
+[ ] Keep elitexteriorsva.com as the primary site (Netlify).  
+[ ] In Wix (elitxteriors.com), set 301 domain forwarding to https://elitexteriorsva.com (www and root).  
+[ ] Verify HTTPS on elitexteriorsva.com, correct canonical URLs, and HSTS.  
+[ ] Update all references to the new email: info@elitexteriorsva.com.  
+[ ] Submit updated sitemap.xml in Google Search Console and Bing Webmaster Tools.  
+[ ] Ensure robots.txt allows crawling and includes sitemap.
+
+2) GOOGLE BUSINESS PROFILE (GBP)
+[ ] Primary Category: Pressure washing service.  
+[ ] Secondary Categories: Gutter cleaning service; Window cleaning service; Exterior cleaning service; Power washing contractor; Roof cleaning service; Deck cleaning service; Siding cleaning service.  
+[ ] Service Areas: Chesapeake, Virginia Beach, Norfolk, Portsmouth, Suffolk, Hampton Roads.  
+[ ] Add 20+ geo‑tagged photos (before/after) over 4 weeks.  
+[ ] Add Products/Services in GBP (each key service with description, price range, and CTA).  
+[ ] Post 3–4 times/week (What’s New, Offer, Before/After, Seasonal tip).  
+[ ] Seed the Q&A section (5–10 common questions with authoritative answers).  
+[ ] Goal: 50+ reviews at 4.9–5.0 stars within 90 days (see Review flow).
+
+3) WEBSITE PAGES TO BUILD/OPTIMIZE (NEXT.JS)
+Priority pages
+[ ] Locations hub: /locations (links to all city pages).  
+[ ] Chesapeake location page: /locations/chesapeake (hero, trust stats, services, neighborhoods, FAQs, schema).  
+[ ] Additional city pages (stagger weekly): Virginia Beach, Norfolk, Portsmouth, Suffolk.  
+[ ] Core service pages: House Washing, Roof Cleaning, Driveway/Concrete, Gutter Cleaning, Window Cleaning, Commercial Power Washing.  
+[ ] Add FAQ sections on all service/location pages and implement FAQPage schema.
+
+Technical implementation
+[ ] Add LocalBusiness schema to each location page (name, phone, address/area served, hours, sameAs).  
+[ ] Add Service schema to each core service page.  
+[ ] Add BreadcrumbList schema sitewide.  
+[ ] Internal linking: service <> location <> blog <> gallery; use descriptive anchors with target keywords.  
+[ ] Accessibility: no gray text on white; use high‑contrast text; ensure readable link colors; heading hierarchy correct.  
+[ ] Core Web Vitals: LCP < 2.5s, CLS < 0.1, INP < 200ms. Optimize images (WebP), lazy‑load, preload hero font, reduce JS, cache headers set in netlify.toml.  
+[ ] Create “Results” gallery with filterable before/after by city/service.  
+[ ] Prominent CTAs: sticky mobile call bar + “Get a Free Quote” on all pages.  
+[ ] Add conversion events (phone click, form submit) to GA4.  
+[ ] Ensure forms post to Netlify Forms with spam honeypot.
+
+4) CONTENT PLAN (90 DAYS)
+Blog (publish weekly)
+[ ] Ultimate Guide to Pressure Washing in Chesapeake, VA.  
+[ ] 5 Signs Your Chesapeake Home Needs Pressure Washing Now.  
+[ ] Soft Wash vs. Pressure Wash: What Chesapeake Homeowners Should Know.  
+[ ] Neighborhood Spotlight: Greenbrier Exterior Cleaning Tips.  
+[ ] Seasonal: Fall Gutter Cleaning Checklist for Chesapeake.  
+Assets  
+[ ] 8 case studies (before/after) with detailed process, chemicals, time, results, neighborhood.  
+[ ] 3 explainer videos (soft wash vs pressure; driveway cleaning; roof algae treatment).  
+[ ] Social posts: 3–4/week (use before/after reels, reviews, tips).
+
+5) REVIEWS ENGINE (VELOCITY + QUALITY)
+[ ] Implement post‑job SMS + email auto‑sequence within 24 hours (link to GBP).  
+[ ] Follow‑up if no review in 3 days; final nudge at 10 days.  
+[ ] QR code on invoices/door hangers.  
+[ ] Reply to every review within 24 hours using keyword‑rich, location‑aware responses.  
+Targets: +5–10 new reviews/month until 50+.
+
+6) CITATIONS (NAP CONSISTENCY)
+Tier 1 (ASAP)
+[ ] Google Business Profile, Bing Places, Apple Maps, Yelp, Facebook, BBB, Angi, HomeAdvisor, Thumbtack, Nextdoor.  
+Local/Industry (weeks 2–6)
+[ ] Chesapeake Chamber, Hampton Roads directories, 757 services directories, PWNA, Pressure Washing Resource Association, local neighborhood/business lists.  
+[ ] Ensure exact NAP: Elite Exteriors | Chesapeake, VA | (your phone) | https://elitexteriorsva.com | info@elitexteriorsva.com
+
+7) BACKLINKS (LOCAL AUTHORITY)
+[ ] Sponsor 2–3 Chesapeake youth teams or community events (earn .org backlinks).  
+[ ] Pitch seasonal home‑care tips to local news; submit press releases (earned media links).  
+[ ] Partner with 5 local realtors/HOAs/property managers for resources pages links.  
+[ ] Join Chamber and get member directory link.  
+[ ] Publish 8 case studies and interlink from GBP posts and social.  
+Goal: 5–10 quality local backlinks/quarter; 50 over 12 months.
+
+8) KEYWORDS TO OWN (PRIMARY SET)
+[ ] pressure washing chesapeake  
+[ ] power washing chesapeake va  
+[ ] house washing chesapeake  
+[ ] roof cleaning chesapeake  
+[ ] driveway cleaning chesapeake  
+[ ] gutter cleaning chesapeake  
+[ ] window cleaning chesapeake
+
+9) TRACKING AND GOALS
+[ ] GA4 + GSC installed and verified; create events: phone_click, quote_request, service_view_30s.  
+[ ] Call tracking (CallRail): unique number on location pages; record calls.  
+KPIs (90 days)
+- Local 3‑pack: Top 3 for “pressure washing chesapeake”.  
+- Organic rankings: Page 1 for primary keywords.  
+- Reviews: 50+ total; 5–10/month.  
+- Conversions: 5% call rate; 3% form rate; 60% close rate from quotes.  
+- Backlinks: +10 local links; +40 citations.
+
+10) WEEK‑BY‑WEEK EXECUTION (FIRST 8 WEEKS)
+Week 1
+[ ] Wix 301 to elitexteriorsva.com; sitemap to GSC; GBP categories/areas updated; add 10 photos; publish Chesapeake location page; enable GA4 events and call tracking.
+Week 2
+[ ] Service pages (House, Roof, Driveway) + schema; 5 citations; 2 GBP posts; start review workflow; 1 blog post.
+Week 3
+[ ] Virginia Beach location page; 5 citations; 2 GBP posts; 1 case study; outreach to 3 partners; add sticky mobile call bar.
+Week 4
+[ ] Norfolk location page; 5 citations; 2 GBP posts; 1 blog; compress images + lazyload audit; add FAQs.
+Week 5
+[ ] Portsmouth location page; 5 citations; 2 GBP posts; secure 1 sponsorship; 1 case study.
+Week 6
+[ ] Suffolk location page; 5 citations; 2 GBP posts; 1 blog; push to local news with seasonal tip.
+Week 7
+[ ] Gallery/case study hub; internal link audit; add Review schema to testimonials; post 10 new photos to GBP/social.
+Week 8
+[ ] Core Web Vitals tune‑up; build 5 more citations; partner follow‑ups; 1 blog + 1 video; review KPI progress and iterate.
+
+11) DEV TASKS FOR THIS REPO
+[ ] Create /locations index and Chesapeake page (already scaffolded if present).  
+[ ] Add schema components (LocalBusiness, Service, FAQ).  
+[ ] Add sticky mobile conversion bar component.  
+[ ] Ensure high‑contrast text classes across legal and content pages (no gray on white).  
+[ ] Netlify forms and spam honeypot confirmed; success tracking events fired.  
+[ ] Update footer with links to Privacy, Terms, Cookie Policy, and Locations.  
+[ ] Add sitemap route regeneration on build; verify robots.
+
+12) CONTENT SOURCES NEEDED
+[ ] Final service list, pricing ranges, neighborhoods list, insurance/license details.  
+[ ] 20+ before/after photos; 3 short vertical videos.  
+[ ] Customer testimonials to seed reviews and case studies.
+
+DONE MEANS: The item is executed in production, measured in GA4/GSC, and reflected in GBP visibility.

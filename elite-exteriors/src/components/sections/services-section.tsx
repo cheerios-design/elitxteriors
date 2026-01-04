@@ -30,14 +30,6 @@ const services = [
     features: ["Gutter Cleaning", "Downspout Service", "Gutter Guards"],
   },
   {
-    title: "Handyman Services",
-    description:
-      "Professional handyman services including general contracting, painting, electrical, and more.",
-    image: "/assets/images/services/commercial-pressure-washing.webp",
-    href: "/handyman",
-    features: ["General Contracting", "Painting & Tiling", "Electrical Work"],
-  },
-  {
     title: "Lawn Care & Mulching",
     description:
       "Complete lawn care and mulching services to keep your property beautiful.",
