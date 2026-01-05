@@ -119,6 +119,8 @@ export function BlogInteractions({
         <button
           onClick={handleLike}
           disabled={isLiking}
+          aria-pressed={isLiked}
+          aria-label={`${isLiked ? "Unlike" : "Like"} this post. Currently ${stats.likes} ${stats.likes === 1 ? "like" : "likes"}`}
           className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
             isLiked
               ? "text-red-600 bg-red-50 hover:bg-red-100"
@@ -129,16 +131,17 @@ export function BlogInteractions({
             className={`h-5 w-5 transition-all duration-200 ${
               isLiked ? "fill-current text-red-600" : ""
             } ${isLiking ? "animate-pulse" : ""}`}
+            aria-hidden="true"
           />
-          <span className="font-medium">{stats.likes}</span>
+          <span className="font-medium" aria-live="polite">{stats.likes}</span>
           <span className="hidden sm:inline text-sm">
             {stats.likes === 1 ? "Like" : "Likes"}
           </span>
         </button>
 
         {/* Comment Display (Read-only) */}
-        <div className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-600">
-          <MessageCircle className="h-5 w-5" />
+        <div className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-600" role="status">
+          <MessageCircle className="h-5 w-5" aria-hidden="true" />
           <span className="font-medium">{stats.comments}</span>
           <span className="hidden sm:inline text-sm">
             {stats.comments === 1 ? "Comment" : "Comments"}
@@ -148,10 +151,11 @@ export function BlogInteractions({
         {/* Share Button */}
         <button
           onClick={handleShare}
+          aria-label={`Share this post. ${stats.shares} ${stats.shares === 1 ? "share" : "shares"} so far`}
           className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-600 hover:text-green-600 hover:bg-green-50 transition-all duration-200 cursor-pointer"
         >
-          <Share2 className="h-5 w-5" />
-          <span className="font-medium">{stats.shares}</span>
+          <Share2 className="h-5 w-5" aria-hidden="true" />
+          <span className="font-medium" aria-live="polite">{stats.shares}</span>
           <span className="hidden sm:inline text-sm">
             {stats.shares === 1 ? "Share" : "Shares"}
           </span>
@@ -159,7 +163,7 @@ export function BlogInteractions({
       </div>
 
       {/* View Count */}
-      <div className="text-sm text-gray-500">
+      <div className="text-sm text-gray-500" role="status" aria-label={`${stats.views} total ${stats.views === 1 ? "view" : "views"}`}>
         {stats.views} {stats.views === 1 ? "view" : "views"}
       </div>
     </div>

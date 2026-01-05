@@ -99,12 +99,13 @@ export function TestimonialsSection() {
               className="testimonial-card bg-white rounded-2xl shadow-lg border border-neutral-200 p-8 hover:shadow-xl transition-shadow duration-300"
             >
               {/* Stars */}
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-4" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg
                     key={i}
                     className="w-5 h-5 text-yellow-400 fill-current"
                     viewBox="0 0 20 20"
+                    aria-hidden="true"
                   >
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
@@ -118,15 +119,15 @@ export function TestimonialsSection() {
 
               {/* Author */}
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
                   <span className="text-primary-700 font-semibold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <div className="font-semibold text-neutral-900">
+                  <cite className="font-semibold text-neutral-900 not-italic">
                     {testimonial.name}
-                  </div>
+                  </cite>
                   <div className="text-sm text-neutral-700">
                     {testimonial.location}
                   </div>
@@ -148,12 +149,20 @@ export function TestimonialsSection() {
               needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary-700 hover:bg-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <a 
+                href="/contact" 
+                className="bg-white text-primary-700 hover:bg-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-block text-center"
+                aria-label="Get your free estimate"
+              >
                 Get Free Estimate
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+              </a>
+              <a 
+                href="tel:+17577697240" 
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-3 rounded-lg font-semibold transition-colors inline-block text-center"
+                aria-label="Call us at 757-769-7240"
+              >
                 Call (757) 769-7240
-              </button>
+              </a>
             </div>
           </div>
         </div>

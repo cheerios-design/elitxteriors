@@ -14,6 +14,8 @@ if (typeof window !== "undefined") {
 export function GallerySection() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageTitle, setImageTitle] = useState<string>("");
@@ -80,17 +82,33 @@ export function GallerySection() {
     setImageTitle("");
   };
 
-  // Close modal on escape key
+  // Close modal on escape key and handle focus trap
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+      if (e.key === "Escape" && selectedImage) {
         closeModal();
+      }
+      
+      // Arrow key navigation
+      if (selectedImage) {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          navigatePrevious();
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          navigateNext();
+        }
       }
     };
 
     if (selectedImage) {
       document.addEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "hidden";
+      
+      // Focus management: move focus to close button when modal opens
+      setTimeout(() => {
+        closeButtonRef.current?.focus();
+      }, 100);
     }
 
     return () => {
@@ -98,6 +116,28 @@ export function GallerySection() {
       document.body.style.overflow = "unset";
     };
   }, [selectedImage]);
+
+  const navigatePrevious = () => {
+    const currentIndex = filteredImages.findIndex(
+      (img) => img.src === selectedImage
+    );
+    const prevIndex =
+      currentIndex > 0 ? currentIndex - 1 : filteredImages.length - 1;
+    const prevImage = filteredImages[prevIndex];
+    setSelectedImage(prevImage.src);
+    setImageTitle(prevImage.title);
+  };
+
+  const navigateNext = () => {
+    const currentIndex = filteredImages.findIndex(
+      (img) => img.src === selectedImage
+    );
+    const nextIndex =
+      currentIndex < filteredImages.length - 1 ? currentIndex + 1 : 0;
+    const nextImage = filteredImages[nextIndex];
+    setSelectedImage(nextImage.src);
+    setImageTitle(nextImage.title);
+  };
 
   return (
     <section
@@ -121,11 +161,12 @@ export function GallerySection() {
           </p>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12" role="group" aria-label="Gallery category filters">
             {galleryCategories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
+                aria-pressed={selectedCategory === category.id}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? "bg-primary-600 text-white shadow-lg"
@@ -150,6 +191,15 @@ export function GallerySection() {
                 <div
                   className="relative group cursor-pointer transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl rounded-lg overflow-hidden"
                   onClick={() => openModal(image.src, image.title)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      openModal(image.src, image.title);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${image.title} in full size`}
                 >
                   <div className="relative">
                     <Image
@@ -251,14 +301,21 @@ export function GallerySection() {
       {/* Image Modal */}
       {selectedImage && (
         <div
+          ref={modalRef}
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
         >
           <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
             {/* Close button */}
             <button
+              ref={closeButtonRef}
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-colors"
+              className="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="Close gallery (press Escape)"
             >
               <svg
                 className="w-6 h-6"
@@ -279,24 +336,17 @@ export function GallerySection() {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                const currentIndex = filteredImages.findIndex(
-                  (img) => img.src === selectedImage
-                );
-                const prevIndex =
-                  currentIndex > 0
-                    ? currentIndex - 1
-                    : filteredImages.length - 1;
-                const prevImage = filteredImages[prevIndex];
-                setSelectedImage(prevImage.src);
-                setImageTitle(prevImage.title);
+                navigatePrevious();
               }}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="Previous image (press Left arrow)"
             >
               <svg
                 className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -310,24 +360,17 @@ export function GallerySection() {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                const currentIndex = filteredImages.findIndex(
-                  (img) => img.src === selectedImage
-                );
-                const nextIndex =
-                  currentIndex < filteredImages.length - 1
-                    ? currentIndex + 1
-                    : 0;
-                const nextImage = filteredImages[nextIndex];
-                setSelectedImage(nextImage.src);
-                setImageTitle(nextImage.title);
+                navigateNext();
               }}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="Next image (press Right arrow)"
             >
               <svg
                 className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -353,12 +396,13 @@ export function GallerySection() {
             </div>
 
             {/* Image title and info */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full max-w-md text-center">
+            <div 
+              id="modal-title"
+              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full max-w-md text-center"
+            >
               <p className="font-semibold">{imageTitle}</p>
-              <p className="text-sm text-white/80 mt-1">
-                {filteredImages.findIndex((img) => img.src === selectedImage) +
-                  1}{" "}
-                of {filteredImages.length}
+              <p id="modal-description" className="text-sm text-white/80 mt-1" role="status" aria-live="polite">
+                Image {filteredImages.findIndex((img) => img.src === selectedImage) + 1} of {filteredImages.length}
               </p>
             </div>
           </div>

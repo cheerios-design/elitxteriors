@@ -103,13 +103,14 @@ export function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-3 text-sm">
+            <address className="space-y-3 text-sm not-italic">
               <div className="flex items-center space-x-3">
                 <svg
                   className="w-4 h-4 text-primary-500 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -118,7 +119,7 @@ export function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-neutral-300">(757) 796-7240</span>
+                <a href="tel:+17577967240" className="text-neutral-300 hover:text-primary-400 transition-colors">(757) 796-7240</a>
               </div>
               <div className="flex items-center space-x-3">
                 <svg
@@ -126,6 +127,7 @@ export function Footer() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -134,9 +136,9 @@ export function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="text-neutral-300">
+                <a href="mailto:info@elitexteriorsva.com" className="text-neutral-300 hover:text-primary-400 transition-colors">
                   info@elitexteriorsva.com
-                </span>
+                </a>
               </div>
               <div className="flex items-start space-x-3">
                 <svg
@@ -144,6 +146,7 @@ export function Footer() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -170,6 +173,7 @@ export function Footer() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -182,11 +186,11 @@ export function Footer() {
                   Mon-Sat: 8:00 AM - 6:00 PM
                 </span>
               </div>
-            </div>
+            </address>
           </div>
 
           {/* Services */}
-          <div>
+          <nav aria-label="Footer services">
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
@@ -200,7 +204,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Service Locations */}
           <div>
@@ -223,7 +227,7 @@ export function Footer() {
           </div>
 
           {/* Company */}
-          <div>
+          <nav aria-label="Footer company links">
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -237,7 +241,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Newsletter & Legal */}
           <div>
@@ -250,11 +254,12 @@ export function Footer() {
             {/* Google Maps */}
             <div className="mb-6">
               <iframe
-                title="Google Maps Location"
+                title="Elite Exteriors Location - 109G Gainsborough Square, Chesapeake, VA"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.265121292952!2d-76.24579072429445!3d36.74020687226422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89babb661e00d56b%3A0x2bb614b028c312f9!2s109%20G%20Gainsborough%20Square%20%23711%2C%20Chesapeake%2C%20VA%2023320%2C%20USA!5e0!3m2!1sen!2str!4v1745269875950!5m2!1sen!2str"
                 className="w-full h-[150px] rounded-lg"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                aria-label="Map showing Elite Exteriors location in Chesapeake, Virginia"
               />
             </div>
 

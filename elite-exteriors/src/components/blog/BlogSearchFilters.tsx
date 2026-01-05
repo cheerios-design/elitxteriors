@@ -52,14 +52,15 @@ export function BlogSearchFilters({
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
       <div className="flex flex-col lg:flex-row gap-4">
         {/* Search Bar */}
-        <form onSubmit={handleSearchSubmit} className="flex-1">
+        <form onSubmit={handleSearchSubmit} className="flex-1" role="search">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" aria-hidden="true" />
             <input
               type="text"
               placeholder="Search blog posts..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search blog posts"
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
             />
           </div>
@@ -68,12 +69,14 @@ export function BlogSearchFilters({
         {/* Filter Toggle */}
         <button
           onClick={() => setShowFilters(!showFilters)}
+          aria-expanded={showFilters}
+          aria-label={`${showFilters ? "Hide" : "Show"} filter options${hasActiveFilters ? " (filters active)" : ""}`}
           className="flex items-center gap-2 px-4 py-3 bg-sky-50 text-sky-700 rounded-lg hover:bg-sky-100 transition-colors"
         >
-          <Filter className="h-5 w-5" />
+          <Filter className="h-5 w-5" aria-hidden="true" />
           Filters
           {hasActiveFilters && (
-            <span className="bg-sky-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+            <span className="bg-sky-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" aria-label="Active filters indicator">
               !
             </span>
           )}
@@ -83,16 +86,17 @@ export function BlogSearchFilters({
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
+            aria-label="Clear all active filters"
             className="flex items-center gap-2 px-4 py-3 text-gray-600 hover:text-gray-900 transition-colors"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5" aria-hidden="true" />
             Clear
           </button>
         )}
       </div>
 
       {/* Results Count */}
-      <div className="mt-4 text-sm text-gray-600">
+      <div className="mt-4 text-sm text-gray-600" role="status" aria-live="polite">
         {totalResults} {totalResults === 1 ? "post" : "posts"} found
       </div>
 
@@ -192,7 +196,7 @@ export function BlogSearchFilters({
             <label className="block text-sm font-medium text-gray-700 mb-3">
               Popular Hashtags
             </label>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by hashtags">
               {allHashtags.slice(0, 10).map((hashtag) => (
                 <button
                   key={hashtag}
@@ -206,6 +210,8 @@ export function BlogSearchFilters({
                       newHashtags?.length ? newHashtags : undefined
                     );
                   }}
+                  aria-pressed={filters.hashtags?.includes(hashtag)}
+                  aria-label={`Filter by ${hashtag} hashtag`}
                   className={`px-3 py-1 text-sm rounded-full border transition-colors ${
                     filters.hashtags?.includes(hashtag)
                       ? "bg-sky-500 text-white border-sky-500"

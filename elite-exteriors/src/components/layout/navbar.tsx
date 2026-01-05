@@ -41,6 +41,18 @@ export function Navbar() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    // Handle ESC key to close mobile menu
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isMobileMenuOpen]);
+
   const isActiveLink = (href: string) => {
     if (href === "/") {
       return pathname === "/";
@@ -90,6 +102,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={isActiveLink(item.href) ? "page" : undefined}
                 className={cn(
                   "body-text relative px-3 py-2 text-sm transition-colors duration-200",
                   // Conditional hover states based on scroll position
@@ -134,9 +147,10 @@ export function Navbar() {
                   ? "text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100"
                   : "text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100"
               )}
-              aria-expanded="false"
+              aria-expanded={isMobileMenuOpen}
+              aria-label={isMobileMenuOpen ? "Close main menu" : "Open main menu"}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{isMobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
               {/* Hamburger icon */}
               <svg
                 className={cn(
@@ -176,6 +190,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={isActiveLink(item.href) ? "page" : undefined}
                 className={cn(
                   "body-text block px-3 py-2 text-base rounded-md transition-colors duration-200",
                   "hover:bg-primary-50 hover:text-primary-600",

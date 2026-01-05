@@ -63,12 +63,12 @@ export function NewsletterSignup({
         </div>
 
         {status === "success" ? (
-          <div className="text-center">
-            <CheckCircle className="h-8 w-8 text-green-500 mx-auto mb-2" />
+          <div className="text-center" role="status" aria-live="polite">
+            <CheckCircle className="h-8 w-8 text-green-500 mx-auto mb-2" aria-hidden="true" />
             <p className="text-sm text-green-700">{message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form onSubmit={handleSubmit} className="space-y-3" aria-label="Newsletter subscription">
             <input
               type="email"
               placeholder="Your email"
@@ -76,17 +76,21 @@ export function NewsletterSignup({
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm placeholder-gray-600 bg-white"
               required
+              aria-required="true"
+              aria-label="Email address for newsletter"
+              autoComplete="email"
             />
             <button
               type="submit"
               disabled={status === "loading"}
+              aria-label={status === "loading" ? "Subscribing to newsletter, please wait" : "Subscribe to newsletter"}
               className="w-full bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-700 transition-colors disabled:opacity-50 text-sm font-medium"
             >
               {status === "loading" ? "Subscribing..." : "Subscribe"}
             </button>
             {status === "error" && (
-              <div className="flex items-center text-red-600 text-xs">
-                <AlertCircle className="h-4 w-4 mr-1" />
+              <div className="flex items-center text-red-600 text-xs" role="alert" aria-live="assertive">
+                <AlertCircle className="h-4 w-4 mr-1" aria-hidden="true" />
                 {message}
               </div>
             )}
@@ -105,12 +109,12 @@ export function NewsletterSignup({
         </div>
 
         {status === "success" ? (
-          <div className="flex items-center text-green-600 text-sm">
-            <CheckCircle className="h-4 w-4 mr-1" />
+          <div className="flex items-center text-green-600 text-sm" role="status" aria-live="polite">
+            <CheckCircle className="h-4 w-4 mr-1" aria-hidden="true" />
             Subscribed successfully!
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-2">
+          <form onSubmit={handleSubmit} className="space-y-2" aria-label="Newsletter subscription">
             <input
               type="email"
               placeholder="Your email"
@@ -118,16 +122,20 @@ export function NewsletterSignup({
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm placeholder-gray-600 bg-white"
               required
+              aria-required="true"
+              aria-label="Email address for newsletter"
+              autoComplete="email"
             />
             <button
               type="submit"
               disabled={status === "loading"}
+              aria-label={status === "loading" ? "Subscribing to newsletter, please wait" : "Subscribe to newsletter"}
               className="w-full bg-sky-600 text-white px-3 py-2 rounded-md hover:bg-sky-700 transition-colors disabled:opacity-50 text-xs font-medium"
             >
               {status === "loading" ? "Subscribing..." : "Subscribe"}
             </button>
             {status === "error" && (
-              <p className="text-red-600 text-xs">{message}</p>
+              <p className="text-red-600 text-xs" role="alert" aria-live="assertive">{message}</p>
             )}
           </form>
         )}
@@ -151,43 +159,51 @@ export function NewsletterSignup({
         </p>
 
         {status === "success" ? (
-          <div className="bg-white/10 rounded-lg p-6">
-            <CheckCircle className="h-8 w-8 mx-auto mb-2 text-green-300" />
+          <div className="bg-white/10 rounded-lg p-6" role="status" aria-live="polite">
+            <CheckCircle className="h-8 w-8 mx-auto mb-2 text-green-300" aria-hidden="true" />
             <p className="text-green-100">{message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="max-w-4xl mx-auto">
+          <form onSubmit={handleSubmit} className="max-w-4xl mx-auto" aria-label="Newsletter subscription">
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
+                <label htmlFor="newsletter-name" className="sr-only">Your name (optional)</label>
                 <input
+                  id="newsletter-name"
                   type="text"
                   placeholder="Your name (optional)"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  autoComplete="name"
                   className="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-600 bg-white border-2 border-white/20 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-white text-lg"
                 />
               </div>
               <div className="flex-1">
+                <label htmlFor="newsletter-email" className="sr-only">Your email address (required)</label>
                 <input
+                  id="newsletter-email"
                   type="email"
                   placeholder="Your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-600 bg-white border-2 border-white/20 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-white text-lg"
                   required
+                  aria-required="true"
+                  autoComplete="email"
                 />
               </div>
               <button
                 type="submit"
                 disabled={status === "loading"}
+                aria-label={status === "loading" ? "Subscribing to newsletter, please wait" : "Subscribe to newsletter"}
                 className="bg-white text-sky-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 whitespace-nowrap text-lg border-2 border-white"
               >
                 {status === "loading" ? "Subscribing..." : "Subscribe"}
               </button>
             </div>
             {status === "error" && (
-              <div className="mt-3 flex items-center justify-center text-red-300 text-sm">
-                <AlertCircle className="h-4 w-4 mr-1" />
+              <div className="mt-3 flex items-center justify-center text-red-300 text-sm" role="alert" aria-live="assertive">
+                <AlertCircle className="h-4 w-4 mr-1" aria-hidden="true" />
                 {message}
               </div>
             )}

@@ -143,8 +143,9 @@ export default function ContactPage() {
       </AnimatedSection>
 
       {/* Contact Info Cards */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" aria-label="Contact information">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="sr-only">Ways to Contact Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
               <AnimatedSection
@@ -152,8 +153,8 @@ export default function ContactPage() {
                 animation="scale"
                 delay={index * 0.1}
               >
-                <div className="text-center p-6 bg-sky-600 rounded-2xl shadow-lg hover:bg-sky-800 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                <address className="text-center p-6 bg-sky-600 rounded-2xl shadow-lg hover:bg-sky-800 transition-all duration-300 not-italic">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                     {info.title === "Phone" && (
                       <svg
                         className="w-8 h-8 text-sky-700"
@@ -198,7 +199,7 @@ export default function ContactPage() {
                     {info.details}
                   </p>
                   <p className="text-sm text-sky-100">{info.description}</p>
-                </div>
+                </address>
               </AnimatedSection>
             ))}
           </div>
@@ -217,18 +218,26 @@ export default function ContactPage() {
                 </h2>
 
                 {submitStatus === "success" && (
-                  <div className="mb-6 p-4 bg-sky-50 border border-sky-200 rounded-lg">
+                  <div 
+                    className="mb-6 p-4 bg-sky-50 border border-sky-200 rounded-lg" 
+                    role="status" 
+                    aria-live="polite"
+                  >
                     <p className="text-sky-800">
-                      Thank you! We&apos;ve received your message and will
+                      ✓ Thank you! We&apos;ve received your message and will
                       contact you within 24 hours.
                     </p>
                   </div>
                 )}
 
                 {submitStatus === "error" && (
-                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <div 
+                    className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg" 
+                    role="alert" 
+                    aria-live="assertive"
+                  >
                     <p className="text-red-800">
-                      Sorry, there was an error submitting your message. Please
+                      ⚠ Sorry, there was an error submitting your message. Please
                       try again or call us directly.
                     </p>
                   </div>
@@ -254,24 +263,28 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name">Full Name <span className="text-red-600" aria-label="required">*</span></Label>
                       <Input
                         id="name"
                         name="name"
                         type="text"
                         required
+                        aria-required="true"
+                        autoComplete="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Your full name"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Label htmlFor="phone">Phone Number <span className="text-red-600" aria-label="required">*</span></Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         required
+                        aria-required="true"
+                        autoComplete="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="(555) 123-4567"
@@ -280,12 +293,14 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email">Email Address <span className="text-red-600" aria-label="required">*</span></Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
                       required
+                      aria-required="true"
+                      autoComplete="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your.email@example.com"
@@ -300,6 +315,7 @@ export default function ContactPage() {
                         name="service"
                         value={formData.service}
                         onChange={handleInputChange}
+                        aria-label="Select the service you need"
                         className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       >
                         <option value="">Select a service</option>
@@ -317,6 +333,7 @@ export default function ContactPage() {
                         name="propertyType"
                         value={formData.propertyType}
                         onChange={handleInputChange}
+                        aria-label="Select your property type"
                         className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       >
                         <option value="">Select property type</option>
@@ -345,6 +362,7 @@ export default function ContactPage() {
                     size="lg"
                     className="w-full"
                     disabled={isSubmitting}
+                    aria-label={isSubmitting ? "Sending your message, please wait" : "Send message and get free estimate"}
                   >
                     {isSubmitting
                       ? "Sending..."
