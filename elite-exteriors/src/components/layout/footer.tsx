@@ -92,14 +92,27 @@ export function Footer() {
               Virginia.
             </p>
 
-            {/* BBB Seal */}
-            <div className="flex justify-center mb-6">
+            {/* BBB Seal & HRRA Logo */}
+            <div className="flex justify-center items-center gap-4 mb-6 flex-wrap">
+              {/* BBB Seal */}
               <iframe
                 className="h-[100px] w-[138px] lg:w-[138px] lg:h-[80px]"
                 title="BBB Seal"
                 src="https://seal-norfolk.bbb.org/frame/blue-seal-120-61-bbb-90553538.png?chk=3213FA74AA"
                 style={{ border: 0 }}
               />
+              
+              {/* HRRA Logo */}
+              <Link href="/blog/proud-members-hampton-roads-realtors-association" className="block hover:opacity-80 transition-opacity">
+                <Image
+                  src="/assets/logos/HRRA-Affiliate-Member-Logo-4b090e4c-803a-4eb7-a2f5-6c5aab3c7d4a.png"
+                  alt="Hampton Roads Realtors Association Affiliate Member"
+                  width={138}
+                  height={100}
+                  className="object-contain"
+                  title="Proud Member of Hampton Roads Realtors Association"
+                />
+              </Link>
             </div>
 
             {/* Contact Info */}

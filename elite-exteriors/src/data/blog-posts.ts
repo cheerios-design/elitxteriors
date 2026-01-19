@@ -4,6 +4,101 @@ import { blogCategories } from "./blog-categories";
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "hrra-membership-announcement",
+    slug: "proud-members-hampton-roads-realtors-association",
+    title: "Proud Members of the Hampton Roads Realtors Association",
+    excerpt:
+      "At Elite Exteriors Pressure Washing, relationships are at the heart of everything we do. Learn why we're proud members of the Hampton Roads Realtors Association and how this benefits both Realtors and homeowners.",
+    content: `
+<h1 class="text-primary-700 font-bold text-3xl mb-3">Proud Members of the Hampton Roads Realtors Association</h1>
+
+<p class="text-primary-900 mb-4 leading-relaxed">At Elite Exteriors Pressure Washing, relationships are at the heart of everything we do. That's why we're proud members of the Hampton Roads Realtors Association (HRRA)—an organization that represents professionalism, integrity, and excellence across the real estate industry in our community.</p>
+
+<p class="text-primary-900 mb-4 leading-relaxed">Whether you're a Realtor preparing a home for market or a homeowner getting ready to sell, we understand one important truth: first impressions matter.</p>
+
+<h2 class="text-primary-700 font-semibold text-2xl mt-8 mb-1">Why We Joined the Hampton Roads Realtors Association</h2>
+
+<p class="text-primary-900 mb-4 leading-relaxed">Real estate is about more than transactions—it's about trust, timing, and teamwork. We joined HRRA because we believe the best results happen when Realtors and service professionals work together toward a shared goal: helping homes show at their absolute best.</p>
+
+<p class="text-primary-900 mb-4 leading-relaxed">As an HRRA member, we stay connected with local real estate professionals, industry standards, and the expectations buyers have when they pull up to a property. This allows us to serve not just as a vendor, but as a reliable partner Realtors can count on.</p>
+
+<h2 class="text-primary-700 font-semibold text-2xl mt-8 mb-1">How This Benefits Realtors</h2>
+
+<p class="text-primary-900 mb-4 leading-relaxed">We know how much is riding on a listing. Clean exteriors can:</p>
+
+<ul class="text-primary-900 mb-4 leading-relaxed list-disc ml-6">
+  <li>Instantly boost curb appeal</li>
+  <li>Help homes photograph better</li>
+  <li>Create a strong first impression before a buyer even steps inside</li>
+</ul>
+
+<p class="text-primary-900 mb-4 leading-relaxed">Our team works with Realtors to ensure exterior cleaning is timely, professional, and stress-free, so you can focus on marketing and closing with confidence. From pre-listing washes to last-minute touch-ups, we understand the pace and pressure of real estate—and we show up accordingly.</p>
+
+<h2 class="text-primary-700 font-semibold text-2xl mt-8 mb-1">Why This Matters to Homeowners</h2>
+
+<p class="text-primary-900 mb-4 leading-relaxed">For homeowners, our HRRA membership is a signal of trust and professionalism. It means:</p>
+
+<ul class="text-primary-900 mb-4 leading-relaxed list-disc ml-6">
+  <li>We understand the selling process</li>
+  <li>We respect timelines and property value</li>
+  <li>We care about protecting and enhancing your home's appearance</li>
+</ul>
+
+<p class="text-primary-900 mb-4 leading-relaxed">A clean exterior isn't just about looks—it can help a home stand out, attract more interest, and even support a stronger sale price. When your Realtor recommends Elite Exteriors, it's because we share the same commitment to quality and results.</p>
+
+<h2 class="text-primary-700 font-semibold text-2xl mt-8 mb-1">Serving Hampton Roads with Pride</h2>
+
+<p class="text-primary-900 mb-4 leading-relaxed">As a local, family-owned business, we're proud to serve homeowners and Realtors across Chesapeake and the greater Hampton Roads area. Our HRRA membership reflects our dedication to being an active, trustworthy part of this community—not just today, but for the long term.</p>
+
+<p class="text-primary-900 mb-4 leading-relaxed">If you're a Realtor looking for a dependable exterior cleaning partner, or a homeowner preparing to sell, we'd be honored to work with you.</p>
+
+<p class="text-primary-900 mb-4 leading-relaxed">Contact Elite Exteriors Pressure Washing today to learn how we can help your next listing make a powerful first impression.</p>
+    `,
+    featuredImage: "/assets/logos/HRRA-Affiliate-Member-Logo-4b090e4c-803a-4eb7-a2f5-6c5aab3c7d4a.png",
+    author: blogAuthors.find((a) => a.name === "Matt Seymen")!,
+    publishedAt: "2026-01-19",
+    readingTime: 3,
+    category: blogCategories.find((c) => c.id === "local-insights")!,
+    tags: [
+      "HRRA",
+      "Hampton Roads Realtors",
+      "real estate",
+      "curb appeal",
+      "home selling",
+      "professional partnerships",
+    ],
+    hashtags: [
+      "#HRRAMember",
+      "#HamptonRoadsRealtors",
+      "#RealEstate",
+      "#CurbAppeal",
+      "#EliteExteriors",
+      "#ChesapeakeVA",
+    ],
+    locations: [
+      "Hampton Roads",
+      "Chesapeake",
+      "Virginia Beach",
+      "Norfolk",
+      "Suffolk",
+      "Newport News",
+    ],
+    seoKeywords: [
+      "Hampton Roads Realtors Association",
+      "HRRA member",
+      "pressure washing for realtors",
+      "home staging exterior cleaning",
+      "pre-listing pressure washing Hampton Roads",
+      "curb appeal Chesapeake VA",
+    ],
+    metaDescription:
+      "Elite Exteriors is a proud member of the Hampton Roads Realtors Association. Learn how our membership benefits Realtors and homeowners preparing homes for sale.",
+    featured: true,
+    likes: 0,
+    views: 0,
+    comments: [],
+  },
+  {
     id: "chesapeake-humidity-exterior-cleaning",
     slug: "how-chesapeake-humidity-affects-your-home-exterior-and-cleaning-solutions",
     title:
