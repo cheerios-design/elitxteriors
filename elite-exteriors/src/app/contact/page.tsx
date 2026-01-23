@@ -52,6 +52,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
+    address: "",
     service: "",
     propertyType: "",
     message: "",
@@ -90,6 +91,7 @@ export default function ContactPage() {
           name: "",
           email: "",
           phone: "",
+          address: "",
           service: "",
           propertyType: "",
           message: "",
@@ -304,6 +306,21 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your.email@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="address">Full Address <span className="text-red-600" aria-label="required">*</span></Label>
+                    <Input
+                      id="address"
+                      name="address"
+                      type="text"
+                      required
+                      aria-required="true"
+                      autoComplete="street-address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      placeholder="123 Main St, City, State, ZIP"
                     />
                   </div>
 
